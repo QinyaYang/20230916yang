@@ -355,4 +355,83 @@ int main()
 		i++;
 	}
 	return 0;
+}*/               //>>>>>>>>>>2023-9-19<<<<<<<<<<<<<
+//int main()
+//{
+//	int arr1[] = { 1,2,3,4,5 };            
+//	printf("%d\n", arr1[2]);
+//	return 0;
+//}
+//int main()
+//{
+//	char arr2[] = { 'd','f','g','l' };
+//	printf("%c\n", arr2[1]);
+//	return 0;
+//}
+/*double MUL(double x, double y)
+{
+	double z = x * y;
+	return z;
+}                         >>>>>>>>>>>>review
+int main()
+{
+	double a = 4.6;
+	double b = 2.3;
+	double mul = 0;
+	mul = MUL(a, b);
+	printf("sum=%lf",mul);
+	return 0;
 }*/
+//>>>>>>>>>>>>>>>>>>>>>>>操作符<<<<<<<<<<<<<<<<<<<<<<<<<<
+//int main()
+//{
+//	int a = 6 % 4;                // %————取模（取余数）
+//	printf("%d", a);
+//	return 0;
+//}
+//int main()
+//{
+//	int b = 1;                                    subject:二进制      
+//	int ccc = b <<1 ;                                      ^^^
+//	printf("%d", ccc);                                     |||
+//	return 0;                                              |||  
+//}                            //  >>（向右） << （向左）移位操作符
+/*int main()
+{
+	int bee = 5;
+	int honey = bee >> 1;
+	printf("%d", honey);
+	return 0;
+}*/
+//int main()
+//{               
+// int a=3;
+// int b=5;                              // >>>>>>>>>>>>位操作符
+//	printf("%d", c);                     //   &————按位与
+//	return 0;
+//}
+//int main()
+//{
+//	int a = 3;
+//	int b = 5;
+//	int c = a | b;                      //  |————按位或
+//	printf("%d", c);
+//	return 0;
+//}
+//int main()
+//{
+//	int weel = 4;
+//	int wheel = 6;
+//	int tech = weel ^ wheel;             //  ^————按位异或
+//	printf("%d", tech);
+//	return 0;
+//}
+//int main()
+//{
+//	int a = 10;            
+//	//a = a + 10;               //》》》》》》》复合赋值操作符
+//	a += 10;    
+//	a -= 3;// += -= *= |= ^= %= >>= <<= &= /=
+//	printf("%d", a);
+//	return 0;
+//}
