@@ -429,9 +429,55 @@ int main()
 //int main()
 //{
 //	int a = 10;            
-//	//a = a + 10;               //》》》》》》》复合赋值操作符
+//	//a = a + 10;               //》》》》》》》复合赋值操作符 
 //	a += 10;    
 //	a -= 3;// += -= *= |= ^= %= >>= <<= &= /=
 //	printf("%d", a);
 //	return 0;
 //}
+// >>>>>>>>>>>>>>>>>>>>2023-9-21凌晨 0：17<<<<<<<<<<<<<<<<<<<<<<<
+//int main()
+//{
+//	int a = 19;
+//	printf("%d\n", !a);         //单目操作符之  逻辑反操作符--！
+//	return 0;                   
+//	                            
+//}                         //在C语言中 用0表示假 用非0表示真
+//int main()
+//{
+//	int w = 0;
+//	printf("%d", !w);
+//	return 0;
+//}
+//int main()
+//{
+//	int a = 28;
+//	int b = -a;
+//	printf("%d", b);          //单目操作符之 —— + -
+//	return 0;
+//}
+/*int main()
+{
+	int a = 9;
+	//printf("%d\n", sizeof(a));
+	//printf("%d", sizeof(int));     //单目操作符之 sizeof 计算变量/类型所占空间
+	double c = 2.3;                                 单位为 字节
+	//printf("%d\n", sizeof (double));
+	//printf("%d",sizeof double/int);   X  error
+	return 0;
+}*/
+//int main()
+//{
+//	int arr[10] = { 0 };
+//	printf("%d", sizeof(arr));  //output=40
+//	return 0;
+//}
+/*int main()
+{
+	int num = 0;                        //数组元素个数=数组总大小/每个元素大小
+	int arr[] = {2,3,5,1,5,1,5,5,6,7,3,7,3,7,3,6,7};
+	num = sizeof(arr) / sizeof(int);
+	printf("num=%d\n", num);
+	return 0;
+}*/
+////////////////////////////////>>>>>b站   P5：鹏哥不可错过的公开课
