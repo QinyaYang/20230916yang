@@ -481,3 +481,80 @@ int main()
 	return 0;
 }*/
 ////////////////////////////////>>>>>b站   P5：鹏哥不可错过的公开课
+        //》》》》》》》》》》如何交换两个int变量的值，不能使用第三个变量
+//int main()
+//{
+//	int a = 3;
+//	int b = 5;
+//	a = b;
+//	
+//	b != 5;
+//	printf("a=%d\n", a);
+//	printf("b=%d\n", b);
+//
+//	return 0;
+//}
+/*int main()
+{
+	int a = 3;
+	int b = 5;
+	int c = a;
+	int d = b;             // 交换两个数用其他变量的情况
+	b = c;
+	a = d;
+	printf("b=%d\n", b);
+	printf("a=%d\n", a);
+	return 0;
+}*/
+/*int main()
+{
+	int a = 3;
+	int b = 5;
+	printf("交换前：a=%d,b=%d\n", a, b);
+	int c = 0;
+	c = a;                            //交换俩个数 用一个变量
+	a = b;
+	b = c;
+	printf("交换后：a=%d,b=%d\n", a, b);
+	return 0;
+}*/
+//int main()
+//{
+//	int a = 3;
+//	int b = 5;                      //自己做的，不用变量
+//	printf("交换后：a=%d,b=%d", b, a);
+//	return 0;
+//}
+/*#include<limits.h>            //  引头文件 
+int main()
+{
+	int a = 3;
+	int b = 5;
+	INT_MAX;                              //可查看极限值
+	printf("未交换：a=%d,b=%d\n", a, b);
+	a = a + b;//a为和                         鹏哥教的1 用两变量的关系
+	b = a - b;//b为原a
+	a = a - b;//a为原b
+	printf("交换后：a=%d,b=%d\n", a, b);
+	
+	return 0;      //????????Question  int溢出 int-4byte-32bit-...
+}*/
+/*int main()
+{
+	int a = 3;
+	int b = 5;
+	a = a ^ b;
+	b = a ^ b;//b为原a                 //异或操作—思维 可读性不高
+	a = a ^ b;//a为原b
+	printf("交换后：a=%d,b=%d\n", a, b);
+	return 0;
+}*/
+//int main()
+//{
+//	int arr[9] = { 1,2,3,4,5,1,2,3,4 };
+//	int arr1[8] = { 1,2,3,4,1,2,3,4 };      自己写的找出单身狗的题
+//	int re[1] = {0};                               X  error  
+//    re[1] = arr - arr1;
+//	printf("re=%d\n", re[1]);
+//	return 0;
+//}
