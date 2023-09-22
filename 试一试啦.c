@@ -659,31 +659,46 @@ int main()
 	printf("单身狗：%d\n", sgl);
 	return 0;
 }*/
-int main()
+//int main()
+//{
+//	int arr[] = { 1,2,3,4,5,1,2,3,4 };
+//	int num = sizeof(arr)/sizeof(arr[0]);
+//	int i = 0;
+//	int j = 0;
+//	int s = 0;
+//	i++;
+//	j++;
+//	s++;
+//	if (arr[i] ^ arr[j] ^ arr[s] == i)
+//		printf("%d\n", i);
+//	/*for (i = 0; i <= num; i++)
+//	{
+//		for (j = 0; j <= num; j++)
+//		{
+//			for (s = 0; s <= num; s++)
+//			{
+//				if (arr[s] ^ arr[i] ^ arr[j] == s)
+//				{
+//					printf("单身狗：%d\n", arr[s]);
+//					break;
+//				}
+//			}
+//		}
+//	}*/
+//	return 0;
+//}
+/*int main()       >>>>>>>>>>>>>>>用异或思想解决 找单身狗的题
 {
-	int arr[] = { 1,2,3,4,5,1,2,3,4 };
-	int num = sizeof(arr)/sizeof(arr[0]);
+	int arr[] = { 1,2,3,4,5,1,2,3,4};
+	int num = sizeof(arr) / sizeof(arr[0]);
+	int re = 0;
 	int i = 0;
-	int j = 0;
-	int s = 0;
-	i++;
-	j++;
-	s++;
-	if (arr[i] ^ arr[j] ^ arr[s] == i)
-		printf("%d\n", i);
-	/*for (i = 0; i <= num; i++)
+	for (i = 0; i < num; i++)
 	{
-		for (j = 0; j <= num; j++)
-		{
-			for (s = 0; s <= num; s++)
-			{
-				if (arr[s] ^ arr[i] ^ arr[j] == s)
-				{
-					printf("单身狗：%d\n", arr[s]);
-					break;
-				}
-			}
-		}
-	}*/
+		re = re ^ arr[i];            //有一个single的情况
+	}                                  
+	//if (i = num - 1)               //有局限，只有双数相同数能异或为0
+		printf("单身狗：%d\n", re);        //也只能找一个单身狗
+
 	return 0;
-}
+}*/
