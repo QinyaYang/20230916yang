@@ -549,12 +549,141 @@ int main()
 	printf("交换后：a=%d,b=%d\n", a, b);
 	return 0;
 }*/
+/*int main()
+{
+	int arr[9] = { 1,2,3,4,5,1,2,3,4 };
+	int arr1[8] = { 1,2,3,4,1,2,3,4 };      自己写的find out the single
+	int re[1] = {0};                               X  error  
+    re[1] = arr - arr1;
+	printf("re=%d\n", re[1]);
+	return 0;
+}*/
+//》》》》》》》》》》》》》《find out the single one》《《《《《《《《《
+/*int main()
+{
+	int arr[] = { 1,2,3,4,-5,1,2,3,4,7,9 };
+	int num = sizeof(arr) / sizeof(arr[0]);   //calculate元素个数
+	int single = 0;     // set up the single的位置
+	for (single = 0; single < num; single++)
+	{
+		int count = 0;       // calculate the single出现的次数
+		int j = 0;          // set up第二个数
+		for (j = 0; j < num; j++)
+		{
+			if (arr[single] == arr[j])
+			{
+				count++;
+			}
+		}
+		if (count == 1)
+		{
+			printf("single: %d\n", arr[single]);
+			//break;                 ???????no break——可求多个single
+		}
+		   
+	}
+	return 0;             // 不能找出多个single ————暴力求解,复杂
+}*/
+/*int main()
+{
+	int arr[] = { 1,2,3,4,1,2,3,4,5,7 };
+	int num = sizeof(arr) / sizeof(arr[0]);
+	int j = 0;
+	for (j = 0; j < num; j++)         myself : XXXX error
+	{
+		if (num [j] == 1))
+			printf("single: %d\n", arr[j]);
+	}
+	return 0;
+}*/
 //int main()
 //{
-//	int arr[9] = { 1,2,3,4,5,1,2,3,4 };
-//	int arr1[8] = { 1,2,3,4,1,2,3,4 };      自己写的找出单身狗的题
-//	int re[1] = {0};                               X  error  
-//    re[1] = arr - arr1;
-//	printf("re=%d\n", re[1]);
+//	int arr[] = { 1,2,3,4,5,1,2,3,4,7 };
+//	int num = sizeof(arr) / sizeof(arr[0]);
+//
 //	return 0;
 //}
+/*int main()
+{
+	int arr[] = { 1,2,3 };
+	int bin[] = { 2,4,6 };
+	int j = 0;
+	for (j = 0; j < 3; j++)
+	{
+		int num = 0;
+		int i = 0;                     //随便写写
+		for (i = 0; i <3; i++)    //数组内的元素自由 add
+		{
+			
+			num = arr[j] + bin[i];
+			printf("num=%d\n", num);
+		}
+	}
+	return 0;
+}*/
+/*int main()
+{
+	int arr[] = { 1,2,3 };
+	int bin[] = { 0,7,1 };
+	int i = 0;
+	int j = 0;
+	int num[] = { 0 };
+	int k = 0;
+	for (i = 0; i < 3; i++)
+	{                              //????????怎样对应元素相加
+		for (j = 0; j < 3; j++)           XXX error
+		{                        
+			num[k] = arr[i] + bin[j]; 
+		}
+	}
+
+	printf("num=%d\n", num[k]);
+	return 0;
+}*/
+/*int main()
+{
+	int arr[] = { 1,2,3,4,5,1,2,3,4 };
+	int num = sizeof(arr) / sizeof(arr[0]);
+	int sgl = 0;
+	int i = 0;
+	int j = 0;
+	for (i = 0; i <= num; i++)
+	{
+		for (j = 0; j <= num; j++)           XXXX error
+		{
+			if (arr[i] ^ arr[j] == 0)          z自己写的
+				printf("单身狗：%d\n", j);
+		}
+	}
+
+	printf("单身狗：%d\n", sgl);
+	return 0;
+}*/
+int main()
+{
+	int arr[] = { 1,2,3,4,5,1,2,3,4 };
+	int num = sizeof(arr)/sizeof(arr[0]);
+	int i = 0;
+	int j = 0;
+	int s = 0;
+	i++;
+	j++;
+	s++;
+	if (arr[i] ^ arr[j] ^ arr[s] == i)
+		printf("%d\n", i);
+	/*for (i = 0; i <= num; i++)
+	{
+		for (j = 0; j <= num; j++)
+		{
+			for (s = 0; s <= num; s++)
+			{
+				if (arr[s] ^ arr[i] ^ arr[j] == s)
+				{
+					printf("单身狗：%d\n", arr[s]);
+					break;
+				}
+			}
+		}
+	}*/
+	return 0;
+}
