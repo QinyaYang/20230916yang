@@ -670,7 +670,7 @@ int main()
 //	j++;
 //	s++;
 //	if (arr[i] ^ arr[j] ^ arr[s] == i)
-//		printf("%d\n", i);
+//	printf("%d\n", i);                   XXXXX error self
 //	/*for (i = 0; i <= num; i++)
 //	{
 //		for (j = 0; j <= num; j++)
@@ -687,7 +687,7 @@ int main()
 //	}*/
 //	return 0;
 //}
-/*int main()       >>>>>>>>>>>>>>>用异或思想解决 找单身狗的题
+/*int main()       >>>>>>>>>>>>>>>用异或思想解决 找单身狗的题<<<<<<<<<<
 {
 	int arr[] = { 1,2,3,4,5,1,2,3,4};
 	int num = sizeof(arr) / sizeof(arr[0]);
@@ -701,4 +701,72 @@ int main()
 		printf("单身狗：%d\n", re);        //也只能找一个单身狗
 
 	return 0;
+}*///》》》》》》》》》》》》》2013-9-23           review/revise
+/*int main()
+{
+	int arr[] = { 1,2,3,4,5,1,2,3,4 };   //3^5^3=5    3^3^5=5
+	int num = sizeof(arr) / sizeof(arr[0]);  
+	int re = 0;
+	int i = 0;
+	for (i = 0; i < num; i++)               //复习
+	{
+		re = re ^ arr[i];                   //用异或解单身狗题
+	}
+	printf("single= %d\n",re);
+	return 0;
 }*/
+/*int main()
+{
+	int arr[] = { 1,2,3,4,5,1,2,3,4 };
+	int num = sizeof(arr) / sizeof(arr[0]);
+	int i = 0;
+	int j = 0;
+	for (i = 0; i < num; i++)
+	{
+		int count = 0;//arr[i]出现次数
+		for (j = 0; j < num; j++)
+		{
+			if (arr[i] == arr[j])
+				count++;
+		}
+		if (count == 1)
+			printf("single= %d\n", arr[i]);
+	}
+
+	return 0;
+}*/
+//>>>>>>>>>>>>>>>>>>>》》》》写程序，运行就在1min后关机，输入我是猪就取消
+/*int main()
+{
+	char sen = 0;
+	scanf("请输入暗号：%s", &sen);      XXXX  error
+	if(sen="我是猪")
+		turn off;
+	return 0;
+}*/ //》》》》》》》》》》》》》》》》写关机程序
+#include<limits.h>
+#include<stdlib.h>
+#include<string.h>
+int main()
+{
+	char input[] = { 0 };     //存储数据
+	system("shutdown -s -t 120");    //关机   cmd
+	printf("注意，电脑将在两分钟内关机，若输入：我是猪，则取消关机\n");
+	scanf("%s", input);
+	if (strcmp(input, "我是猪") == 0)
+	{
+		system("shutdown -a");
+	}
+	else
+	{
+		goto again;
+	}
+	return 0;
+}
+
+
+
+
+
+
+
