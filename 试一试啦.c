@@ -747,7 +747,7 @@ int main()
 #include<limits.h>
 #include<stdlib.h>
 #include<string.h>
-int main()
+/*int main()
 {
 	char input[20] = { 0 };     //存储数据
 	system("shutdown -s -t 120");    //关机   cmd
@@ -763,11 +763,108 @@ int main()
 		goto again;
 	}
 	return 0;
+}*/ //>>>>>>>>>>>>>>>>>>>>>>>>>>>>.2023-9-24  review/revist
+//int main()
+//{
+//	char input[] = { 0 };
+//	system("shutdown -s -t 120");
+//	again:
+//	printf("Attention!你的电脑将在2分钟内关机，若输入正确，则关机取消");
+//	scanf("%s", input);
+//	if (strcmp(input, "I'm a pig") == 0)
+//	{
+//		system("shutdown -a");
+//	}
+//	else
+//	{
+//		goto again;
+//	}
+//	return 0;
+//}
+//int main()
+//{
+//	int a = 9;
+//	printf("a=%d\b", a);  // \b为退格符
+//	return 0;
+//}
+// 。。。。。。。。。。。。。。。题目————用函数怎样求几个数的最大值
+/*int main()
+{                //先求两个数较大值
+	int arr[] = { 2,5};
+	if (arr[0] > arr[1])
+	{
+		printf("the larger one is:%d\n", arr[0]);
+	}
+	else
+	{
+		printf("the larger one is:%d\n", arr[1]);
+	}
+
+	return 0;
+}*/
+/*int CMP(int x, int y)              // >>>>>>>用函数求两个数较大值
+{
+	if (x > y)
+		return x;
+	else
+		return y;
 }
-
-
-
-
-
+int main()
+{
+	int a = 5;
+	int m = 9;
+	int bigger = 0;
+	bigger = CMP(a, m);
+	printf("the bigger one is:%d\n", bigger);
+	return 0;
+}*/
+/*int main()
+{
+	int x = 9;
+	int y = 6;
+	int z = 2;
+	if (x > y)
+	{
+		if (z > x)
+			printf("max=%d\n", z);
+		else
+			printf("max=%d\n", x);
+	}
+	else
+	{
+		if (y < z)
+			 printf("max=%d\n", z);
+		else
+			 printf("max=%d\n", y);
+	}
+	return 0;
+}*///硬算求三个数最大值         if语句
+/*int MAX(int x, int y, int z)
+{
+	if (x > y)
+	{
+		if (z > x)
+			return z;// printf("max=%d\n", z);
+		else
+			return x;// printf("max=%d\n", x);
+	}
+	else
+	{
+		if (y < z)
+			return z;// printf("max=%d\n", z);
+		else
+			return y;// printf("max=%d\n", y);
+	}
+}
+	int main()        //<<<<<<<<<<<用函数求三个数最大值  暴力求法
+{
+	int b = 7;
+	int r = 3;
+	int p = 0;
+	int max = 0;
+	max = MAX(b, r, p);
+	printf("max=%d\n", max);
+	return 0;
+}*/
 
 
