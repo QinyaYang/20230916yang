@@ -866,5 +866,148 @@ int main()
 	printf("max=%d\n", max);
 	return 0;
 }*/
-
-
+///////////////////////////////////2023-9-25  night
+/*float MAX(float x, float y)
+{
+	if (x > y)
+		return x;
+	else
+		return y;
+}                                    //review/revist
+int main()
+{
+	float a = 1.4;
+	float b = 0.9;
+	float max = 0;
+	max = MAX(a, b);
+	printf("max=%f\n", max);
+	return 0;
+}*/ 
+//>>>>>>>>>>>compare the input numbers
+/*int MIN(int x, int y)
+{
+	if (x < y)
+		return x;
+	else
+		return y;
+}
+int main()
+{
+	int a = 0;
+	int b = 0;
+	int min = 0;
+	scanf("%d%d", &a, &b);
+	min = MIN(a, b);
+	printf("min=%d\n", min);
+	return 0;
+}*/
+//》》》》》》》》》》》》》》》sizeof操作符
+//int main()
+//{
+//	int a = 98;
+//	int arr[] = { 2,6,3,6,7,2};
+//	float bin[] = { 2.4,3.5,8.5,9.6 };
+//	printf("%d\n", sizeof(a));
+//	printf("%d\n", sizeof a);
+//	printf("%d\n", sizeof(int));
+//	//printf("%d\n", sizeof int);          //error
+//	printf("%d\n", sizeof(arr[3]));
+//	printf("%d\n", sizeof(bin[0]));
+//	printf("%d\n", sizeof(bin));         //calculate数组长度大小
+//	printf("num=%d\n", sizeof(bin) / sizeof(bin[0]));//计算数组元素个数
+//	return 0;
+//}
+/*int main()
+{               //负数在内存存储是以二进制的补码
+	int a = 0;
+	int b = ~a;                ////>>>>>>>>>  ~————按位取反
+	printf("b=%d\n", b);// int -4byte-32bit a=00000000000000000000000000000000
+	return 0;              //~a =11111111111111111111111111111111<补码>
+} */                         //    11111111111111111111111111111110<反码>
+                               //^ ————符号位，0为正，1为负  
+                           //    10000000000000000000000000000001<原码>
+						   
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>前后置++/--操作符《《《《《《《《《《《
+/*int main()
+{
+	int a = 10;
+	int b = a++;                //》》》》》》》》》》后置++   操作符
+	printf("a=%d b=%d\n", a, b);                   //先使用，后自增
+	int f = 20;
+	int g = ++f;                //》》》》》》》》》》前置++ 操作符
+	printf("f=%d g=%d\n", f, g);                   //先自增，后使用
+	int r = 4;
+	int t = r--;
+	printf("r=%d t=%d\n", r, t);
+	int i = 0;
+	int k = --i;
+	printf("i=%d k=%d\n", i, k);
+	return 0;
+}*/
+//int main()
+//{
+//	int y = (double)3.14;        //>>>>>>>>>>>>>>>>  ()————强制类型转换
+//	printf("y=%d\n", y);
+//	return 0;
+//}
+//      》》》》》》关系操作符： >  >=  <  <=  !=  ==
+/*int main()
+{
+	int q = 9;
+	int b = 6;                        // 真——1 假——0
+	int a = q && b;//   >>>>>>>>>>>>>>>>>>>>>逻辑与—— && (相乘)
+	printf("a=%d\n", a);                    //区别 按位与——&（相交）
+	int o = 1;                              //     按位或——| (相和）
+	int r = 0;                              //   按位异或——^
+	int d = o || r;
+	printf("d=%d\n", d);
+	return 0;
+}*/
+//》》》》》》》》》》》》》》》》》》》条件操作符 exp1  ? exp2 : exp3
+//若1为真，执行2，2为整个的结果； 1为假，执行3，3为整个的结果
+/*int main()
+{
+	int a = 19;
+	int b = 32;
+	a > b ? printf("max=%d", a) : printf("max=%d", b);
+	return 0;
+}*/
+/*int main()
+{
+	int a = 8;
+	int b = 9;
+	int max = 0;
+	max = (a > b ? a : b);
+		printf("max=%d\n", max);
+	return 0; 
+}*/
+/*int main()                   //用条件操作符 求两个数较大值
+{
+	int a = 0;
+	int b = 0;
+	int max = 0;
+	scanf("%d%d", &a, &b);
+	max = (a > b ? a : b);
+	printf("max=%d\n", max);
+	return 0;
+}*/
+//int main()
+//{
+//	int arr[] = { 0 };
+//	printf("%d\n", arr[3]);    //  []————下标引用操作符
+//	return 0;
+//}
+/*int sum = 0;
+int a = 0;         //全局变量
+int b = 0;
+int ADD(int s, int m)
+{
+	sum = (a > b ? a : b);
+}
+int main()
+{
+	scanf("%d%d", &a, &b);
+	sum = ADD(a, b);            //  ()————函数调用操作符
+	printf("sum=%d\n", sum);
+	return 0;
+}*/
