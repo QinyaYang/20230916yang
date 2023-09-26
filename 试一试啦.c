@@ -1007,7 +1007,53 @@ int ADD(int s, int m)
 int main()
 {
 	scanf("%d%d", &a, &b);
-	sum = ADD(a, b);            //  ()————函数调用操作符
+	sum = ADD(a, b);            // >>>>>>>>>()——函数调用操作符<<<<<<<<<<<<
 	printf("sum=%d\n", sum);
 	return 0;
 }*/
+//  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>2023-9-26
+//》》》》》》》》》》》》常见关键字《《《《《《《《《《《《《《《《《《
+//auto  break  case  char  const  extern  continue  default  double  else
+//enum  float  for  goto  if  int  long  register  return  short  signed
+//sizeof  static  struct  switch typedef  union  unsigned  void  while volatile 
+//int main()
+//{
+//	//int a = 0;         //a——局部变量（自动变量）   a出作用域就自动销毁
+//	auto int a = 0;        //前面的auto 通常省略     
+//	return 0;        // >>>>>>>>>>>>> auto————常用关键字<<<<<<<<<<<<<<
+//}
+// 
+// 
+// >>>>>>>>>>>>>>>>>>>>>>register————寄存器关键字<<<<<<<<<<<<<<<<<<<<<<<<<
+// 随着计算机发展，内存的访问速度跟不上CPU的运行速度，则CPU先从寄存器中取，
+//不够再一级级向下取  /  \
+//                  /寄存器\     -空间小访问速度快
+//               / 高速缓存  \              ———计算机存储数据的方式
+//             /      内存    \
+//            /      硬盘      \  -空间大速度慢  
+//
+// int main()
+//{
+//	register int a = 0;  //————建议把a放进寄存器，a重要
+//	return 0;
+//}
+//>>>>>>>>>>>>>>>>>>>>>>>signed 关键字 -unsigned <<<<<<<<<<<<<<<<<<<<<<<<<
+//int main()
+//{
+//	//int a = -2;   // int <---> signed int     signed被省略
+//	unsigned int a = -2;
+//	//printf("%d", a);
+//	return 0;       //int 被定义为有符合的变量
+//}
+//>>>>>>>>>>>>>>>>>>>>>>>typedef————类型重定义<<<<<<<<<<<<<<<<<<<<<<
+int main()
+{
+	typedef unsigned int int_u;
+	int_u a = -2;
+	unsigned int b = -3;
+	int c = -1;
+	printf("a=%d\n", a);
+	printf("b=%d\n", b);
+	printf("c=%d\n", c);
+	return 0;
+}
