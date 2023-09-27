@@ -1046,7 +1046,7 @@ int main()
 //	return 0;       //int 被定义为有符合的变量
 //}
 //>>>>>>>>>>>>>>>>>>>>>>>typedef————类型重定义<<<<<<<<<<<<<<<<<<<<<<
-int main()
+/*int main()
 {
 	typedef unsigned int int_u;
 	int_u a = -2;
@@ -1056,4 +1056,132 @@ int main()
 	printf("b=%d\n", b);
 	printf("c=%d\n", c);
 	return 0;
+}*/
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>2023-9-27
+/*int main()
+{
+	signed int a = -1;
+	unsigned int b = -2;               QQQQQQQQQQQQQ
+	int c = ~a;
+	int d = ~b;
+	printf("c=%d\n", c);
+	printf("d=%d\n", d);
+	return 0;
+}*/
+//》》》》》》》》》》》》》》》key word————static《《《《《《《《
+
+/*void test()            //    void代表empty    void函数无返回值
+{
+	int a = 1;        //局部变量a  --出定义域就销毁
+	a++;
+	printf("a=%d\n", a);         //result:a=2   x 5
 }
+int main()
+{
+	int i = 0;
+	while (i < 5)
+	{
+		test();
+		i++;
+	}
+	return 0;
+}*/
+/*void test()
+{
+	static int a = 1;      //!!!!!!!!!!!!有static 此时a为静态的局部变量
+	a++;                       
+	printf("a=%d\n", a);  //static用法 ①   修饰局部变量使其生命周期变长
+}                                        //（作用域不变）
+int main()
+{
+	int i = 0;
+	while (i < 5)
+	{
+		test();
+		i++;
+	}
+	return 0;
+}*/
+/*extern void test();
+int main()
+{
+	int i = 0;
+	while (i < 5)
+	{
+		test();
+		i++;
+	}
+	return 0;
+}*/
+/*int main()
+{
+	extern gittt;              // static 用法 ②修饰全局变量  使其作用域
+	printf("gittt=%d\n", gittt);   //让静态的全变只能在所在源文件内使用
+	return 0;
+}*/
+
+/*extern int ADD(int, int);
+int main()
+{
+	int a = 10;                     //(  modify function)
+	int b = 20;       // static 用法 ③修饰函数 使其由外部链接属性->内部
+	int sum = 0;
+	//extern int ADD(int, int);
+	sum = ADD(a, b);
+	printf("sum=%d\n", sum);
+	return 0;
+}*/
+//》》》》》》》》》》》》》#define  定义标识符常量 和 宏《《《《《《《《《《《
+/*#define a 20
+int main()
+{
+	printf("a=%d\n", a);    //#define  define标识符常量（constant）
+	return 0;
+}*/
+/*int MAX(int x, int y)           >
+{                                 >
+	if (x > y)                    >
+		return x;                 >
+	else                          >
+		return y;                 >
+}
+int main()                        >用函数（function）定义（define）
+{
+	int a = 10;
+	int b = 20;
+	int max = 0;                  >
+	max = MAX(a, b);              >
+	printf("max=%d\n", max);      >
+	return 0;
+}*/
+
+/*#define MAX(x,y) (x>y?x:y)    // >>>>>#define 定义宏  --联动三目操作符
+int main()
+{
+	int q = 40;
+	int w = 30;
+	int max = 0;
+	max = MAX(q, w);
+	printf("max=%d\n", max);
+	return 0;
+}*/
+//#define MAX(x,y) (x<y?y:x)
+//int main()
+//{
+//	int a = 9;
+//	int b = 3;
+//	int max = MAX(a, b);
+//	printf("max=%d\n", max);
+//	return 0;;
+//}
+
+/*#define MUL(x,y) (x*y)                  //宏的定义更简洁
+int main()
+{
+	int a = 7;
+	int b = 7;
+	int mul = 0;
+	mul = MUL(a, b);
+	printf("mul=%d\n", mul);
+	return 0;
+}*/
