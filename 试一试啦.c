@@ -1060,8 +1060,9 @@ int main()
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>2023-9-27
 /*int main()
 {
-	signed int a = -1;
-	unsigned int b = -2;               QQQQQQQQQQQQQ
+	signed int a = -1;      //数据存储讲 -1的实际存储是二进制的111......1111
+	                         //取反后全是 0，全0解释出的十进制就是0
+	unsigned int b = -2;              // QQQQQQQQQQQQQ
 	int c = ~a;
 	int d = ~b;
 	printf("c=%d\n", c);
@@ -1183,5 +1184,81 @@ int main()
 	int mul = 0;
 	mul = MUL(a, b);
 	printf("mul=%d\n", mul);
+	return 0;
+}*/
+/*#define ADD(x,y) (x+y)
+int main()
+{
+	int a = 0;
+	int b = 0;
+	scanf("%d%d", &a, &b);
+	int sum = 0;
+	sum = ADD(a, b);
+	printf("sum=%d\n", sum);
+	return 0;
+}*/
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>2023-9-28
+//             》》》》》》》  static --three usages      review/revist
+/*void test()
+{
+	static int a = 0;
+	a++;
+	printf("a=%d\n", a);
+}
+int main()
+{
+	int i = 0;
+	while (i < 7)
+	{
+		test();
+		i++;
+	}
+	return 0;
+}*/
+/*int main()
+{
+	extern int sum;
+	printf("sum=%d\n", sum);
+	return 0;
+}*/
+/*extern ADD(int, int);
+int main()
+{
+	int a = 7;
+	int b = 3;
+	int sum = 0;
+	sum = ADD(a, b);
+	printf("sum=%d\n", sum);
+	return 0;
+}*/
+//                      》》》》》#define   two definitons
+//#define sum 20
+//int main()
+//{
+//	
+//	printf("sum=%d\n", sum);
+//	return 0;
+//}
+/*#define MAX(x,y) (x>y?x:y)
+int main()
+{
+	int a = 0;
+	int b = -2;
+	int bigger = 0;
+	bigger = MAX(a, b);
+	printf("bigger=%d\n", bigger);
+	return 0;
+}*/
+/*int MAX(int s, int m)
+{
+	s > m ? s : m;
+}
+int main()
+{
+	int q = 9;
+	int w = 11;
+	int max = 0;
+	max = MAX(q, w);
+	printf("max=%d\n", max);
 	return 0;
 }*/
