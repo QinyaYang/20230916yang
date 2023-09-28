@@ -873,7 +873,7 @@ int main()
 		return x;
 	else
 		return y;
-}                                    //review/revist
+}                                    //review/revise
 int main()
 {
 	float a = 1.4;
@@ -1198,7 +1198,7 @@ int main()
 	return 0;
 }*/
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>2023-9-28
-//             》》》》》》》  static --three usages      review/revist
+//             》》》》》》》  static --three usages      review/revise
 /*void test()
 {
 	static int a = 0;
@@ -1262,3 +1262,49 @@ int main()
 	printf("max=%d\n", max);
 	return 0;
 }*/
+//  内存    如何产生地址?????  一个内存空间大小为 1 byte  32位机器可访问4GB
+// ________________________________
+// |_______________________________| 1
+// |_______________________________| 2         int a=4;
+// |_______________________________| 3  √       apply 4 byte
+// |_______________________________| 4   √
+// |_______________________________| 5   √
+// |_______________________________| 6
+//   .............................
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> pointer<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+//int main()
+//{                            //如何存放？？？   存放在哪儿？？？
+//	int a = 9;
+//	printf("%p\n", &a);           //指针变量：用来存放地址的变量
+//	int* p = &a;                    //指针类型为： int*
+//	printf("%p\n", p);
+//	return 0;
+//}
+/*int main()
+{
+	int q = 9;
+	printf("%p\n", &q);
+	int* p = &q;
+	printf("%p\n", p);        // * ————解引用操作符
+	*p = 12;                   // *p ————对p进行解析，找到p所指变量a 
+	printf("解析后 q=%d\n", q);
+	return 0;
+}*/
+/*int main()
+{
+	char qaq = 'q';
+	char* p = &qaq;
+	printf("%d\n", p);//address
+	*p = 'u';
+	printf("解析后 qaq=%c\n", qaq);
+	return 0;
+}*/
+int main()
+{
+	printf("%d\n", sizeof(int*));
+	printf("%d\n", sizeof(char*));//在32位机器上是 4 byte  （32根地址线）
+	printf("%d\n", sizeof(short*));//在64位机器上是 8 byte  （64根数据线）
+	printf("%d\n", sizeof(double*));
+	printf("%d\n", sizeof(float*));//全是8 byte
+	return 0;
+}
