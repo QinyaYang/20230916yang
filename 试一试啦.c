@@ -1363,3 +1363,31 @@ int main()
 	}
 	return 0;
 }*/
+//int main()
+//{
+//	int a = 3;                 // 地址为十六进制
+//	printf("%p\n", &a);        //000000C037CFF744
+//	return 0;
+//}
+//int main()
+//{
+//  double att = 3.14;
+//  printf("%p\n", &att);
+//  double *p= % att;
+//  *p=5.62;
+//  printf("%lf\n",att);
+//  printf("%d\n",sizeof(p));      // X86--4byte   X64--8byte 
+//	char arr[] = { 1,2,3 };
+//	printf("%p\n", &arr);      //0000007F3791FA84  一个任意十六进制数
+//	return 0;
+//}
+struct Book
+{
+	char name[10];
+	short price;
+};
+int main()
+{
+	struct Book b1 = { "初识C语言",56 };
+	return 0;
+}
