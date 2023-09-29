@@ -1031,7 +1031,9 @@ int main()
 //               / 高速缓存  \              ———计算机存储数据的方式
 //             /      内存    \
 //            /      硬盘      \  -空间大速度慢  
-//
+//          /                    \
+//                                  内存 5GB
+//                                  硬盘 500GB
 // int main()
 //{
 //	register int a = 0;  //————建议把a放进寄存器，a重要
@@ -1299,12 +1301,65 @@ int main()
 	printf("解析后 qaq=%c\n", qaq);
 	return 0;
 }*/
+//int main()
+//{
+//	printf("%d\n", sizeof(int*));
+//	printf("%d\n", sizeof(char*));//在32位机器上是 4 byte  （32根地址线）
+//	printf("%d\n", sizeof(short*));//在64位机器上是 8 byte  （64根数据线）
+//	printf("%d\n", sizeof(double*));
+//	printf("%d\n", sizeof(float*));//全是8 byte
+//	return 0;
+//}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>2023-9-29-22:00
+//int main()
+//{
+	/*int a = 7;
+	printf("%p\n", &a);
+	int* p = &a;
+	printf("%p\n", p);
+	*p = 3;
+	printf("改后 a=%d\n", a);*/
+	/*char at = 'f';
+	printf("%p\n", &at);
+	char* p = &at;
+	printf("%p\n", p);
+	*p = 'q';
+	printf("改后 at=%c\n", at);*/
+	/*char new = "abcd";
+	printf("%p\n", &new);
+	char* p = &new;
+	printf("%p\n", p);
+	*p = "abdd";
+	printf("new=%s\n", new);*/             //QQQQQQQQQQQQQQQQQQQQqqqq
+
+//	return 0;
+//}
+//int main()
+//{
+//	static int a = 9;
+//	a = 10;
+//	printf("a=%d\n", a);
+//	return 0;                     //static 修饰的 variable可以改变
+//}
+/*int  test()
+{
+	int a = 2;
+	int c = 0;
+	static int b = 3;
+	c += 1;
+	b += 2;
+	int sum = a + b + c;                    //QQQQQQQQQQQQQQQQQQQqqqqqq
+	return sum;
+}
 int main()
 {
-	printf("%d\n", sizeof(int*));
-	printf("%d\n", sizeof(char*));//在32位机器上是 4 byte  （32根地址线）
-	printf("%d\n", sizeof(short*));//在64位机器上是 8 byte  （64根数据线）
-	printf("%d\n", sizeof(double*));
-	printf("%d\n", sizeof(float*));//全是8 byte
+	int i = 0;
+	int sum = 0;
+	int a = 2;
+	for (i = 0; i < 5; i++)
+	{
+		test();
+		printf("sum=%d\n", sum);
+	}
 	return 0;
-}
+}*/
