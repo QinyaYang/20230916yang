@@ -1348,8 +1348,8 @@ int main()
 	static int b = 3;
 	c += 1;
 	b += 2;
-	int sum = a + b + c;                    //QQQQQQQQQQQQQQQQQQQqqqqqq
-	return sum;
+	int add = a + b + c;                    //QQQQQQQQQQQQQQQQQQQqqqqqq 23
+	return add;
 }
 int main()
 {
@@ -1358,7 +1358,7 @@ int main()
 	int a = 2;
 	for (i = 0; i < 5; i++)
 	{
-		test();
+		sum = test();                    //这里得把test 的返回值赋给 sum
 		printf("sum=%d\n", sum);
 	}
 	return 0;
@@ -1373,7 +1373,7 @@ int main()
 //{
 //  double att = 3.14;
 //  printf("%p\n", &att);
-//  double *p= % att;
+//  double *p= & att;
 //  *p=5.62;
 //  printf("%lf\n",att);
 //  printf("%d\n",sizeof(p));      // X86--4byte   X64--8byte 
@@ -1381,13 +1381,50 @@ int main()
 //	printf("%p\n", &arr);      //0000007F3791FA84  一个任意十六进制数
 //	return 0;
 //}
-struct Book
+
+/*struct Book
 {
-	char name[10];
-	short price;
+	char name[30];
+	int price;
 };
 int main()
 {
-	struct Book b1 = { "初识C语言",56 };
+	struct Book iss = { "初识C语言",55 };
+	printf("name=%s\n", iss.name);
+	printf("price=%d元\n", iss.price);
+	iss.price = 45;
+	printf("修改后的价格：%d元\n", iss.price);
+	struct Book * p =  & iss;                 //struct Book*————指针类型
+	printf("%p\n", *p);                       // p————指针变量
+	printf("%p\n", iss);
+	printf("name's address= %p\n", (* p).name);
+	printf("price's address= %p\n", (* p).price);
+	printf("%s\n", (*p).name);
+	printf("%d\n", (*p).price);
+	printf("%s\n", p->name);      //》》》》》》》简洁很多
+	printf("%d\n", p->price);     //
+	//printf("%s\n", iss.name);     >>>> error  error error error
+	//printf("%d\n", iss.price);    >>>>
+
+	return 0;
+}*/
+
+struct info
+{
+	char name;
+	double tall;
+	double weight;
+	char career;
+};
+int main()
+{
+	struct info yang = { "Qinyayang",156,132,"student" };
+	struct info* p = &yang;
+	printf("name=%s\n", (*p).name);
+	printf("tall=%lf\n", (*p).tall);
+	printf("weight=%lf\n", (*p).weight);
+	printf("career=%s\n", (*p).career);
+
+
 	return 0;
 }
