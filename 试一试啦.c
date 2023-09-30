@@ -1411,20 +1411,30 @@ int main()
 
 struct info
 {
-	char name;
+	char name[20];
 	double tall;
 	double weight;
-	char career;
+	char career[20];               //char 里面必须存放东西
 };
 int main()
 {
-	struct info yang = { "Qinyayang",156,132,"student" };
+	struct info yang = { "Qinyayang",156,60,"student" };
 	struct info* p = &yang;
-	printf("name=%s\n", (*p).name);
-	printf("tall=%lf\n", (*p).tall);
-	printf("weight=%lf\n", (*p).weight);
-	printf("career=%s\n", (*p).career);
+	
+	//*p->name = "c++";
+	//yang.name= "c++";              //error   
+	strcpy(yang.name, "c++");               //>>>>>>将c++拷贝到yang.name里去
+	printf("new name: %s\n", yang.name);    //>>>>>>strcpy--<string.h>
+	strcpy(yang.career, "scientist");
+	printf("new tall : %s\n", yang.career);
+	//printf("%s\n", *p->name);   //error  数组名的本质是地址
+	/*printf("name=%s\n", p->name);
+	printf("tall=%lf\n", p->tall);
+	printf("weight=%lf\n", p->weight);
+	printf("career=%s\n", p->career);
 
-
+	printf("%p\n", p->name);
+	printf("%p\n", p->tall);
+	*/
 	return 0;
 }
