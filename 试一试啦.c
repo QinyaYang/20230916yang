@@ -1409,7 +1409,7 @@ int main()
 	return 0;
 }*/
 
-struct info
+/*struct info
 {
 	char name[20];
 	double tall;
@@ -1428,13 +1428,144 @@ int main()
 	strcpy(yang.career, "scientist");
 	printf("new tall : %s\n", yang.career);
 	//printf("%s\n", *p->name);   //error  数组名的本质是地址
-	/*printf("name=%s\n", p->name);
+	printf("name=%s\n", p->name);
 	printf("tall=%lf\n", p->tall);
 	printf("weight=%lf\n", p->weight);
 	printf("career=%s\n", p->career);
 
 	printf("%p\n", p->name);
 	printf("%p\n", p->tall);
-	*/
+	
 	return 0;
+}*/
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.2023-10-1
+/*struct Mate
+{
+	char name[20];
+	char sex[10];
+	int score;
+
+};
+int main()
+{
+	struct Mate yang = { "Qinyayang","female",110 };
+	struct Mate* p = &yang;
+	//printf("odd name: %s\n", yang.name);
+	printf("odd:%s\n", p->name);
+	strcpy(yang.name, "Yaositu");
+	printf("pre:%s\n", p->name);
+	//printf("presant name: %s\n", yang.name);
+	return 0;
+}*/
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>2023-10-2
+//》》》》》》》》》》》》》》》分支语句与循环语句《《《《《《《《《《《《《《《
+//int main()
+//{
+//	char input[20] = { 0 };
+//	printf("你要好好学习吗？\n");
+//	scanf("%s", &input);                  //QQQQQQQQQQQQQQQQQQQQq45
+//	if(input == "yes")
+//		printf("good job\n");
+//	else
+//		printf("loser\n");
+//	return 0;
+//}
+//int main()
+//{
+//	int age = 0;
+//	scanf("%d\n", age);
+//	if (age < 15)
+//		printf("不能玩跳楼机\n");        //QQQQQQQQQQQQQQQQQQQQQQQQQQQQq
+//	else
+//		printf("已成年，可以玩跳楼机\n");
+//	return 0;
+//}
+/*int main()
+{
+	int age =0;
+	scanf("%d", &age);
+	if (age < 18)
+		printf("为未成年\n");
+	else if (age >= 18 && age < 28)
+		printf("为青年\n");
+	else if (age >= 28 && age < 50)
+		printf("为壮年\n");
+	else if (age >= 50 && age < 90)
+		printf("为老年\n");
+	else
+		printf("为老不四\n");
+
+	
+	
+	return 0;
+}*/
+/*int main()
+{
+	int tall = 156;
+	if (tall < 150)
+	{
+		printf("身高不够\n");               //执行多个任务用代码块
+		printf("不能玩跳楼机\n");
+	}
+	else
+	{
+		printf("身高够\n");
+		printf("可以玩跳楼机\n");
+	}
+	return 0;
+}*/
+/*int main()
+{
+	int a = 0;
+	int b = 2;
+	if (a == 1)
+	{
+		if (b == 2)                //if 与它最近的未匹配的else匹配
+			printf("hehe\n");
+	}                               //可用{}将其分割开
+	else
+		printf("haha\n");
+	return 0;
+}*/
+/*COMP(int x, int y)
+{
+	if (x > y)
+		return x;
+	else
+		return y;
 }
+int main()
+{
+	int a = 3;
+	int b = 9;
+	int max = 0;
+	max = COMP(a, b);
+	printf("max=%d\n", max);
+	return 0;
+}*/
+/*int main()
+{                            //     const  variable
+	int a = 5;                 //涉及常量和变量的比较——变量放后 常量放前
+	if (5 == a)              //避免弄错 等号和赋值 = / ==
+		printf("bingo!\n");
+	else
+		printf("error\n");
+	return 0;
+}*/
+//》》》》》》》》》》》》》》Practicing《《《《《《《《《《《《《《《《
+//1. How to judge if a count is odd
+/*int main()
+{
+	int a = 0;
+	scanf("%d", &a);
+	printf("a=%d\n", a);
+	if (a % 2 == 0)
+	{
+		printf("a 为偶数\n");
+	}
+	else
+	{
+		printf("a 为奇数\n");
+	}
+	return 0;
+}*/
