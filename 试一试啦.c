@@ -1569,3 +1569,147 @@ int main()
 	}
 	return 0;
 }*/
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>2023-10-2
+//2.   输出1~100的奇数
+/*int main()
+{
+	int i = 0;
+	for (i = 0; i <= 100; i++)                    // method    ONE
+	{
+		if (i % 2 == 1)
+			printf("The odd: %d\n", i);
+	}
+	return 0;
+}*/
+/*int main()
+{
+	int i = 0;
+	while (i <= 100)
+	{
+		if (i % 2 !=0)
+			printf("the odd number is :%d\n", i);
+		    i++;
+	}
+	return 0;
+}*/
+//》》》》》》》》》》》》switch--case语句多分支语句《《《《《《《《《《《
+//》》》》》》》》》。。。。break  /  default。。。。。关键字》》》》》》》》
+// int main()
+//{
+//	int day = 0;
+//	scanf("%d",& day);
+//	if (1 == day)
+//		printf("today is Monday\n");
+//	else if (2==day)
+//		printf("today is Tuesday\n");
+//	else if (3==day)
+//		printf("today is Wednesday\n");       //用switch 语句简化
+//	else if (4==day)
+//		printf("today is Thursday\n");
+//	else if (5==day)
+//		printf("today is Friday\n");
+//    else if (6==day)
+//		printf("today is Saturday\n");
+//    else if (7==day)
+//		printf("today is Sunday\n");
+//
+//	return 0;
+//}
+/*int main()
+{
+	int day = 0;
+	scanf("%d", &day);
+	switch (day)
+	{
+	case 1:
+		printf("星期1\n");
+		break;
+	case 2:                 //从case进去   没有出去的地方 出去要break
+		printf("星期2\n");            
+		break;
+	case 3:
+		printf("星期3\n");
+		break;
+	case 4:
+		printf("星期4\n");
+		break;
+	case 5:
+		printf("星期5\n");
+		break;
+	case 6:
+		printf("星期6\n");
+		break;
+	case 7:
+		printf("星期7\n");
+		break;
+	}
+	return 0;
+}*/
+/*int main()
+{
+	int age = 0;
+	scanf("%d", &age);
+	switch (age)              //age 必须是整型
+	{
+	case 1+0:                   //case 后接整型常量表达式
+		printf("child\n");
+		break;
+	case 2:
+		printf("youth\n");
+		break;
+	case 3:
+		printf("adult\n");
+		break;
+	case 4:
+		printf("odd\n");
+		break;
+	}
+	return 0;
+}*/
+//>>>>>>>>>>>>>>>>>>>>>>...Practice<<<<<<<<<<<<<<<,
+// 输入1~5输出“工作日”    6~7输出“休息日”
+/*int main()
+{
+	int day = 0;
+	scanf("%d", &day);
+	switch (day)
+	{
+	case 1:
+	case 2:
+	case 3:
+	case 4:
+	case 5:
+		printf("今日为工作日\n");
+		break;
+	case 6:
+	case 7:
+		printf("今日为休息日\n");
+		break;
+	default:
+		printf("输入错误\n");
+		break;
+	}
+	return 0;
+}*/
+//写出数值
+/*int main()
+{
+	int n = 1; int m = 2;
+	switch (n)
+	{
+	case 1:m++;
+	case 2:n++;
+	case 3:
+	{
+		switch (n)
+		{
+		case 1:n++;
+		case 2:m++; n++; break;
+		}
+	}
+	case 4:m++; break;
+	default: break;
+	}
+	printf("m=%d n=%d\n", m, n);
+	return 0;
+}*/
