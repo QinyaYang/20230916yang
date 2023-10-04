@@ -1713,3 +1713,44 @@ int main()
 	printf("m=%d n=%d\n", m, n);
 	return 0;
 }*/
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>2023-10-4
+/*int main()
+{
+	int i = 0;           //》》》》》》》while 循环《《《《《《《《《
+	while (i <10 )
+	{
+		i++;
+		if (i == 6)
+			printf("%d\n", i);
+	}
+	return 0;
+}*/
+//  打印1~10的数
+/*int main()
+{
+	int i = 0;
+	while ( i <= 10)        //i==5后跳到while判断句
+	{
+		i++;
+		if (i == 5)
+			continue;      //碰到continue就结束本次循环，跳到判断句看下一次
+		printf("i=%d\n", i);       //碰到break就停止后期所有循环
+		//i++;
+	}
+	return 0;
+}*/
+//int main()
+//{
+//	int ch = getchar();
+//	putchar(ch);                 // 这里putchar和printf用法相同
+//	printf("%s", ch);            //
+//	return 0;
+//}
+int main()
+{
+	int ch = getchar();
+	while (getchar() != EOF)
+		putchar(ch);
+	
+	return 0;
+}
