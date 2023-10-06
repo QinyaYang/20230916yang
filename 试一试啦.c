@@ -1746,11 +1746,66 @@ int main()
 //	printf("%s", ch);            //
 //	return 0;
 //}
-int main()
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>2023-10-6
+/*int main()
 {
 	int ch = getchar();
-	while (getchar() != EOF)
+	//char ch[20] = {0};
+	scanf("%c", &ch);
+	putchar(ch);                  //>>等价
+	printf("%c\n", ch);           //>>
+	return 0;
+}*/
+/*int main()
+{
+	int ch = 0;
+	//int ch = getchar();         //XXXXX error
+	while ((ch=getchar()) != EOF)
+	{
 		putchar(ch);
+	}
+
+	return 0;
+}*/
+//int main()
+//{
+//	char ch[20] = { 0 };
+//	scanf("%s", &ch);
+//	printf("%s\n", ch);
+//	
+//	return 0;
+//}
+/*int main()
+{
+	int ch = 0;
+	while ((ch = getchar()) != EOF)        //getchar是一个一个地接受字符
+	{                                //EOF————值为-1 end of file
+		putchar(ch); 
+	}
+	return 0;
+}*/
+//int main()
+//{
+//	putchar(65);
+//	return 0;
+//}
+int main()
+{
+	printf("请输入密码:>\n");
+	char password[20] = { 0 };
 	
+	printf("请确认密码(X/Y");
+	scanf("%s", &password);
+	int ret = 0;
+	ret = getchar();
+	if (ret == "Y")
+		printf("error\n");
+	else
+		printf("pass\n");
+	/*scanf("%s", &password);
+	if (password == 021)
+		printf("pass\n");        //XXXXXXXXXXXXX  error
+	else
+		printf("error\n");*/
 	return 0;
 }
