@@ -1791,21 +1791,27 @@ int main()
 //}
 int main()
 {
-	printf("请输入密码:>\n");
+	printf("请输入密码:> ");
 	char password[20] = { 0 };
-	
-	printf("请确认密码(X/Y");
-	scanf("%s", &password);
-	int ret = 0;
-	ret = getchar();
+	scanf("%s", &password);  //缓冲区里还有个'\n' 用getchar将其读走
+	getchar();                      //若输入有空格的情况下，getchar只会读走空格前的  
+	                                         //如："1234 qwe"
+	printf("请确认密码(Y/N): ");          //1.scanf读走"1234"
+	int ret = 0;                          //2.getchar读走" "  (空格)   
+	ret = getchar();                      //3.getchar读走"q"  !="Y" --->error
 	if (ret == "Y")
-		printf("error\n");
-	else
 		printf("pass\n");
-	/*scanf("%s", &password);
-	if (password == 021)
-		printf("pass\n");        //XXXXXXXXXXXXX  error
 	else
-		printf("error\n");*/
+		printf("error\n");
+	//scanf("%s", &password);
+	//if (password == 021)
+	//	printf("pass\n");        //XXXXXXXXXXXXX  error
+	//else
+	//	printf("error\n");
 	return 0;
 }
+//int main()
+//{
+//	printf("%d\n", '\n');          // '\n'的ASCII码值为10
+//	return 0;
+//}
