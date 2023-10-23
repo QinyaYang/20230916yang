@@ -422,31 +422,235 @@
 //    printf("num=%d\n", num);
 //    return 0;
 // }
-#include<math.h>
+//#include<math.h>
 //int main()                   // 1/1 - 1/2 + 1/3 - 1/4 +...+1/99 - 1/100
 //{
 //    float i = 0;
 //    float sum = 0;
 //    float minus = 0;
-//    for (i = 1 ; i <= 100 ; i++)
+//    for (i = 1 ; i <= 50 ; i++ )
 //    { 
-//        
 //        minus = pow((-1), (i + 1));
-//        sum = (float)(sum + (minus*( 1 / (i+1) )));
-//
+//        sum = (float) (sum + (minus * (1 / i)));  
 //    }
-//        printf("sum=%lf\n", sum);
+//    printf("sum=%lf\n", sum);
 //    return 0; 
 //}
-int main()
+//int main()
+//{
+//    float i = 0; 
+//    float sum = 0;
+//    for (i = 1; i <= 100; i + 2)
+//    {
+//        sum = (float)(sum + (1 / i) - (1 / (i + 1)));
+//    }
+//    printf("sum = %d\n", sum);
+//  //  printf("sum = %d\n", sum);
+//    return 0;
+//}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> do-while   先执行后判断  至少执行一次
+//int main()
+//{
+//    int i = 0;                          // do-while    print 1~10
+//    i = 1;
+//    printf("print 1~10\n");
+//    do
+//    {
+//        printf("%d ", i);
+//        i++;
+//    } while (i <= 10);
+//    return 0;
+//}
+//int main()
+//{
+//    int i = 0;
+//    for (i = 1; i <= 10; i++)
+//    {
+//        printf("%d ", i);
+//    }
+//    return 0;
+//}
+//int main()
+//{
+//    int i = 1;
+//    while (i <= 10)
+//    {
+//        printf("%d ", i);
+//        i++;
+//    }
+//    return 0;
+//}
+//int main()
+//{
+//    int a = 0;
+//    int num = 0;
+//    scanf("%d", &a);  //1234
+//    while (a > 0)
+//    {
+//        num++;
+//        a = a / 10;
+//    }
+//    printf("%d",num);
+//    return 0;
+//}
+//int main()                        
+//{
+//    int a = 0;                // >>>>>>>>>>>>> do-while 求input 正整数的位数
+//    int num = 0;
+//    if ((scanf("%d", &a)) != EOF)
+//    {
+//        for (num = 1; num < 32; num++)
+//        {
+//            a = a / 10;
+//            if (a == 0)
+//            {
+//                break;
+//            }
+//        }
+//        printf("%d", num);
+//    }
+//    return 0;
+//}
+//int main()
+//{
+//    int num = 0;
+//    int a = 0;
+//    if ((scanf("%d", &a)) != EOF)
+//    {
+//        do
+//        {
+//            num++;
+//            a = a / 10;
+//        } while (a > 0);
+//        printf("%d\n", num);
+//    }
+//    return 0;
+//}
+//int main()
+//{
+//    int i = 0;
+//    while (i <= 10)
+//    {
+//        i++;
+//        if (i == 5)
+//            continue;
+//        printf("%d ", i);
+//    }
+//    return 0;
+//}
+//int main()
+//{
+//    int i = 0;
+//    for (i = 1; i <= 10; i++)
+//    {
+//        if (i == 5)
+//            continue;        //与break互换
+//        printf("%d ", i);
+//    }
+//    return 0;
+//}
+//int main()
+//{
+//    int i = 0;
+//    for (i = 1; i <= 10; )      //>>>>>
+//    {                           //>>>>>
+//        if (i == 5)             //>>>>>  死循环
+//            continue;           //>>>>>
+//        printf("%d ", i);
+//        i++;
+//    }
+//    return 0;
+//}
+//int main()
+//{
+//    int i = 1;
+//    for (; i <= 10; i++)
+//    {
+//        if (i == 5)
+//            continue;
+//        printf("%d ", i);
+//    }
+//    return 0;
+//}
+//int main()
+//{
+//    int i = 1;
+//    for (; ; i++)             //  for 循环三部分均能省略
+//    {
+//        if (i == 99)
+//            break;
+//        printf("%d ", i);
+//    }
+//    return 0;
+//}
+//int main()
+//{
+//    int i = 1;
+//    do                                        //>>>>>>
+//    {                                         //>>>>>>  死循环
+//        if (i == 5)                           //>>>>>>
+//            continue;    //break;             //>>>>>>
+//        printf("%d ", i);
+//        i++;
+//    } while (i <= 10);
+//    return 0;
+//}
+//int main()                     // print 100~200之间的合数
+//{
+//    int i = 0;
+//    int j = 0;
+//    
+//    for (i = 100; i <= 200; i++)
+//    {
+//        for (j = 2; j < i; j++)
+//        {
+//            if ((i % j) == 0)
+//            {
+//                printf("%d ", i);           // print 合数 ①
+//                break;
+//            }
+//        }
+//    }
+//    return 0;
+//}
+int main()                     // print 100~200之间的质数（素数）
 {
-    float i = 0; 
-    float sum = 0;
-    for (i = 1; i <= 100; i + 2)
+    int i = 0;
+    int count = 0;
+    for (i = 100; i <= 200; i++)
     {
-        sum = (float)(sum + (1 / i) - (1 / (i + 1)));
-        printf("sum = %d\n", sum);
+        int flag = 1;      //假设 i 是素数
+        int j = 0;
+        for (j = 2; j < i; j++)
+        {
+            if ((i % j) == 0)
+            {
+                flag = 0;  //i 不是素数                                // print 质数 ②
+                break;
+            }
+        }  
+        if (flag == 1)      // i 依然为素数时
+        {
+            printf("%d ", i);
+            count++;
+        }
     }
-  //  printf("sum = %d\n", sum);
+    printf("count: %d", count);
     return 0;
 }
+//int main()
+//{
+//    int a = 0, b = 0;
+//    for (a = 1, b = 1; a <= 100; a++)
+//    {
+//        if (b >= 20) break;
+//        if (b % 3 == 1)
+//        {
+//            b = b + 3;
+//            continue;
+//        }
+//        b = b - 5;
+//    }
+//    printf("%d\n", a);
+//    return 0;
+//}
