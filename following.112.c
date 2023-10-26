@@ -613,31 +613,31 @@
 //    }
 //    return 0;
 //}
-int main()                     // print 100~200之间的质数（素数）
-{
-    int i = 0;
-    int count = 0;
-    for (i = 100; i <= 200; i++)
-    {
-        int flag = 1;      //假设 i 是素数
-        int j = 0;
-        for (j = 2; j < i; j++)
-        {
-            if ((i % j) == 0)
-            {
-                flag = 0;  //i 不是素数                                // print 质数 ②
-                break;
-            }
-        }  
-        if (flag == 1)      // i 依然为素数时
-        {
-            printf("%d ", i);
-            count++;
-        }
-    }
-    printf("count: %d", count);
-    return 0;
-}
+//int main()                     // print 100~200之间的质数（素数）
+//{
+//    int i = 0;
+//    int count = 0;
+//    for (i = 100; i <= 200; i++)
+//    {
+//        int flag = 1;      //假设 i 是素数
+//        int j = 0;
+//        for (j = 2; j < i; j++)
+//        {
+//            if ((i % j) == 0)
+//            {
+//                flag = 0;  //i 不是素数                                // print 质数 ②
+//                break;
+//            }
+//        }  
+//        if (flag == 1)      // i 依然为素数时
+//        {
+//            printf("%d ", i);
+//            count++;
+//        }
+//    }
+//    printf("count: %d", count);
+//    return 0;
+//}
 //int main()
 //{
 //    int a = 0, b = 0;
@@ -653,4 +653,208 @@ int main()                     // print 100~200之间的质数（素数）
 //    }
 //    printf("%d\n", a);
 //    return 0;
+//}
+//计算100~200的素数           //>>>>>>>>>>>review /revise
+#include<math.h>
+//int main()
+//{
+//    int i = 0;
+//    int j = 0;          
+//    int count = 0;                   // 存在 i % j == 0      i / (2~i-1)能整除
+//    for (i = 101; i <= 200; i+=2)  //优化①——奇数才可能是素数
+//    {
+//        int test = 1;                  //每次产生一个i都设 i 为素数
+//        for (j = 2; j < sqrt(i); j++)
+//        {
+//            if ((i % j) == 0)
+//            {
+//                test = 0;                  // i 不为素数的情况
+//                break;
+//            }
+//        }
+//        if (test == 1)
+//        {
+//            printf("%d ", i);
+//            count++;
+//        }
+//    }
+//    printf("count: %d", count);
+//    return 0;
+//}
+//int main()
+//{
+//    printf("haha\n");
+//    goto test;                              //  goto 语句——跳转到同一函数的标号处
+//    printf("hehehehe\n");
+//test:
+//    printf("pig you are\n");
+//    return 0;
+//}
+//int main()
+//{
+//    int i = 0;
+//    int j = 0;
+//    int count = 0;
+//    for (i = 0; i < 5; i++)
+//    {
+//        for (j = 0; j < 5; j++)
+//        {
+//            printf("hehe! ");
+//            count++;
+//        }
+//    }
+//    printf("count = %d\n", count);
+//    return 0;
+//}
+//int main()
+//{
+//    int i = 0;
+//    int j = 0;
+//    int count = 0;
+//    for ( ; i < 5; i++)
+//    {
+//        for ( ; j < 5; j++)           // j == 5后就一直是5了，因为for语句的初始化部分是空
+//        {
+//            printf("hehe! ");
+//            count++;
+//        }
+//    }
+//    printf("count = %d\n", count);
+//    return 0;
+//}
+//》》》》》》》》》》》》》》》》》》》》猜数字游戏
+//  1. print a menu
+//  2. chose a mode
+// 
+// 
+//int main()
+//{
+//    int input = 0;
+//    
+//        while((scanf("%d", &input)) != EOF)          // 也可实现多次输入 ，但不好
+//    {
+//        printf("****************************\n");
+//        printf("********** 1. PLAY *********\n");
+//        printf("********** 0. EXIT *********\n");
+//        printf("****************************\n");
+//
+//        printf("Please chose your mode: >");
+//
+//        switch (input)
+//        {
+//        case 1:
+//            printf("Play\n");
+//            break;
+//        case 0:
+//            printf("Exit\n");
+//            break;
+//        default:
+//            break;
+//        }
+//    }
+//    return 0;
+//}
+ #include<math.h>
+#include<time.h>
+#include<stdlib.h>
+void menu()                                                                     
+{
+    printf("****************************\n");
+    printf("********** 1. PLAY *********\n");
+    printf("********** 0. EXIT *********\n");
+    printf("****************************\n");
+}
+//   分装— 猜数字游戏的实现
+void game()
+{
+    //srand((unsigned int)time(NULL));——只能有一次
+
+    int ret = rand() % 100 + 1;//  1. 生成随机数 1~100
+    printf("%d\n", ret);
+    int guess = 0;             //  2. 猜数字
+    int count = 5;  //共有五次玩的机会
+    while (count)                  //while ((scanf("%d", &guess)) != EOF)  //不好设置值
+    {
+        printf("你还有%d次机会\n", count);
+        printf("请猜一个数字:>");
+        scanf("%d", &guess);
+        if (guess < ret)
+        {
+            printf("抱歉，你猜小了\n");
+            //count--;
+            //continue;
+        }
+        else if (guess > ret)
+        {
+            printf("抱歉，你猜大了\n");
+            //count--;
+            //continue;
+        }
+        else if (guess == ret)
+        {
+            printf("恭喜你，猜对了！！！\n");
+            //count--;
+            break;
+        }
+        count--;
+    }
+    if (count == 0)
+    {
+        printf("次数用完，游戏结束\n");
+        printf("正确的数字是：%d\n", ret);
+    }
+}
+int main()
+{
+    int input = 0;
+    
+    srand((unsigned int)time(NULL));   //种子每次只设置一次—— main function
+    do
+    { 
+         menu();
+    printf("Please chose your mode: >");
+    scanf("%d", &input);
+    {
+        //srand((unsigned int)time(NULL));             //不能放在这儿，只用一次放main 里
+        switch (input)
+        {
+        case 1:
+            printf("猜数字游戏\n");
+            game();
+            break;
+        case 0:
+            printf("退出游戏\n");
+            break;
+        default:
+            printf("选择错误\n");
+            break;
+        }
+    }
+    } while (input);     // 非0 再进入，0 退出
+    return 0;
+}
+
+#include<stdlib.h>
+#include<math.h>
+#include<time.h>
+// int main()
+//{                        //>>>>>>>>>>>>>>>>>>>>随机值的生成 -- srand & time
+//    /*RAND_MAX;
+//	printf("max= %d\n", RAND_MAX);   
+//	
+//    srand((unsigned int)time(NULL));*/     // srand function & time function
+//    srand(1);
+//    int o = rand();      //生成随机数( 0 ~ RAND_MAX(32767))
+//	
+//    o = rand();             
+//    printf("%d\n", o);     
+//    o = rand();             
+//    printf("%d\n", o);         // rand 生成的是伪随机数,是以"种子"为基准值算法生成
+//    o = rand();            
+//    printf("%d\n", o);
+//    o = rand();             
+//    printf("%d\n", o);
+//    o = rand();
+//    printf("%d\n", o);
+//	return 0;
 //}
