@@ -757,7 +757,7 @@
  #include<math.h>
 #include<time.h>
 #include<stdlib.h>
-void menu()                                                                     
+/*void menu()
 {
     printf("****************************\n");
     printf("********** 1. PLAY *********\n");
@@ -832,7 +832,7 @@ int main()
     }
     } while (input);     // 非0 再进入，0 退出
     return 0;
-}
+}*/
 
 #include<stdlib.h>
 #include<math.h>
@@ -858,3 +858,76 @@ int main()
 //    printf("%d\n", o);
 //	return 0;
 //}
+//>>>>>>>>>>>>>>>>>>>>>.2022.10.30
+//int main()                      // 给定两个数，求两者的最大公约数   4 6 —> 12
+//{
+//    int a = 0;
+//    int b = 0;
+//    printf("请输入两个值，以求最大公约数:\n");
+//    scanf("%d %d", &a, &b);
+//
+//   
+//    return 0;
+//}
+//int main()
+//{
+//    int score[60] = { 0 };                // 没有就默认 0 补齐
+//    char arr[5] = {'a','b','c','d'};     // 其余的默认用 0 补齐
+//    double eee[5] = { 3.14, 2.5 };
+//    int table[10] = { 0,1,2,3,4,5,6,7,8,9 };
+//    /*printf("%d\n", score[34]);
+//    printf("%c\n", arr[0]);
+//    printf("%lf\n", eee[0]);*/
+//    int n = 0;
+//    for (n = 4; n >= 4 && n <= 7; n++)
+//    {
+//        printf("%d\n", table[n]);
+//
+//    }
+//    return 0;
+//}
+//int main()                               // 向创建的数组[] 输入数据 
+//{
+//    int arr[10] = { 0 };
+//    int n = 0;
+//    for (n = 0; n <= 9; n++)
+//    {
+//        scanf("%d", &arr[n]);
+//    }
+//    //printf("%d\n", arr[3]);   //输出单个数组元素  
+//    for (n = 0; n <= 9; n++)
+//    {
+//        printf("%d ", arr[n]);        //多个
+//    }
+//    return 0;
+//}
+//int main()
+//{
+//    int arr[10] = { 0,1,2,3,4,5,6,7,8,9 };
+//    int n = 0;
+//    //printf("%p", &arr[0]);                 // 取单个的地址
+//    for (n = 0; n <= 9; n++)
+//    {
+//        printf("&arr[%d] = %p\n", n, &arr[n]);      // &--取地址
+//    }                                               //%p--打印地址
+//    return 0;
+//}
+int main()
+{
+   int arr[] = { 1,2,3,6,2,7,23,52,14,72,16,27,86,36,84,26};
+   int sz = sizeof(arr) / sizeof(arr[0]);
+   int n = 0;
+
+    printf("all space: %zd\n", sizeof(arr));
+    printf("each space: %zd\n", sizeof(arr[0]));
+    printf("nummber: %d\n", sz);
+    for (n = 0; n <= sz; n++)
+    {
+        printf("&arr[%d]: %p\n", n, &arr[n]);
+    }
+    for (n = 0; n <= sz; n++)
+    {
+        printf("%d ", arr[n]);             // ??????????????  最后一个数有问题
+    }
+    return 0;
+}
