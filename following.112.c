@@ -912,22 +912,79 @@ int main()
 //    }                                               //%p--打印地址
 //    return 0;
 //}
+//int main()
+//{
+//   int arr[] = { 1,2,3,6,2,7,23,52,14,72,16,27,86,36,84,26};
+//   int sz = sizeof(arr) / sizeof(arr[0]);
+//   int n = 0;
+//
+//    printf("all space: %zd\n", sizeof(arr));
+//    printf("each space: %zd\n", sizeof(arr[0]));
+//    printf("nummber: %d\n", sz);
+//    for (n = 0; n < sz; n++)
+//    {
+//        printf("&arr[%d]: %p\n", n, &arr[n]);
+//    }
+//    for (n = 0; n < sz; n++)
+//    {
+//        printf("%d ", arr[n]);             // ??????????????  最后一个数有问题
+//    }
+//    return 0;
+//}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>2023-10-31   Halloween
+//int main()
+//{
+//    //int arr[3][5] = { 0 };
+//    int arr[4][6] = { 1,2,3,4,5,6,7,8,9,0 };         // two dimensions array
+//    int i = 0;                                            
+//    int j = 0;
+//    for (i = 0; i < 4; i++)
+//    {
+//        for (j = 0; j < 6; j++)
+//        {
+//            printf("%d ", arr[i][j]);
+//        }
+//    }
+//    return 0;
+//}
+//int main()
+//{
+//    int arr[2][3] = { 1, 2, 3, 4, 5, 6, 7, 8}; //  error -- array不能超过初始设定项
+//    return 0; 
+//}
+//int main()
+//{
+//    int arr[4][6] = { 1,2,3,4,5,6,7,8,9,0 };         
+//    int eee[4][4] = { {1,2},{3,4,5},{6} };       // 二维array 按照行initialization
+//    printf("%d\n", arr[2][5]);
+//    printf("%d\n", eee[0][1]);
+//    return 0;
+//}
+//int main()
+//{
+//    int club[3][5] = { 0 };
+//    scanf("%d", &club[2][2]);
+//    return 0;
+//}
 int main()
 {
-   int arr[] = { 1,2,3,6,2,7,23,52,14,72,16,27,86,36,84,26};
-   int sz = sizeof(arr) / sizeof(arr[0]);
-   int n = 0;
-
-    printf("all space: %zd\n", sizeof(arr));
-    printf("each space: %zd\n", sizeof(arr[0]));
-    printf("nummber: %d\n", sz);
-    for (n = 0; n <= sz; n++)
+    int arr[3][5] = { 0 };            // 给二维array 输入值并打印出
+    int i = 0;
+    int j = 0;
+    for (i = 0; i < 3; i++)
     {
-        printf("&arr[%d]: %p\n", n, &arr[n]);
+        for (j = 0; j < 5; j++)
+        {
+            scanf("%d", &arr[i][j]);
+        }
     }
-    for (n = 0; n <= sz; n++)
+    for (i = 0; i < 3; i++)
     {
-        printf("%d ", arr[n]);             // ??????????????  最后一个数有问题
+        for (j = 0; j < 5; j++)
+        {
+            printf("%d ", arr[i][j] );
+            printf("&arr[%d][%d] : %p\n", i, j, &arr[i][j]);
+        }
     }
     return 0;
 }
