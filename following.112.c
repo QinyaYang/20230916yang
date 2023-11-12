@@ -966,25 +966,292 @@ int main()
 //    scanf("%d", &club[2][2]);
 //    return 0;
 //}
-int main()
+//int main()
+//{
+//    int arr[3][5] = { 0 };            // 给二维array 输入值并打印出
+//    int i = 0;
+//    int j = 0;
+//    for (i = 0; i < 3; i++)
+//    {
+//        for (j = 0; j < 5; j++)
+//        {
+//            scanf("%d", &arr[i][j]);
+//        }
+//    }
+//    for (i = 0; i < 3; i++)
+//    {
+//        for (j = 0; j < 5; j++)
+//        {
+//            printf("%d ", arr[i][j] );
+//            printf("&arr[%d][%d] : %p\n", i, j, &arr[i][j]);
+//        }
+//    }
+//    return 0;
+//}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 2023-11-3  
+//int main()                                      // review/revise
+//{
+//    int i = 0;
+//    int j = 0;
+//    int arr[2][3] = { 0 };
+//    for (i = 0; i < 2; i++)
+//    {
+//        for (j = 0; j < 3; j++)
+//        {
+//            scanf("%d", &arr[i][j]);       // !!!!!!!!!!! %d后不要 input space
+//        }
+//    }
+    /*for (i = 0; i < 2; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            printf("%d ", arr[i][j]);
+            printf("&arr[%d][%d] : %p\n", i, j, &arr[i][j]);
+        }
+    }*/
+//    printf("%d\n", arr[1][0]);            //  访问 arr[0][j]  arr[1][j] 
+//    printf("%d\n", arr[1][2]);
+//    return 0;
+//}
+//>>>>>>>>>>>>>>>>>>>>>>>>>> 2023.11.8
+/*int main()
 {
-    int arr[3][5] = { 0 };            // 给二维array 输入值并打印出
+    int arr[2][4] = { 0 };
     int i = 0;
     int j = 0;
-    for (i = 0; i < 3; i++)
+    for (i = 0; i < 2; i++)
     {
-        for (j = 0; j < 5; j++)
+        for (j = 0; j < 4; j++)
         {
             scanf("%d", &arr[i][j]);
         }
     }
-    for (i = 0; i < 3; i++)
+    for (i = 0; i < 2; i++)
     {
-        for (j = 0; j < 5; j++)
+        for (j = 0; j < 4; j++)
         {
-            printf("%d ", arr[i][j] );
-            printf("&arr[%d][%d] : %p\n", i, j, &arr[i][j]);
+            printf("%d ", arr[i][j]);
+        }
+    }
+    printf("\n");
+    for (i = 0; i < 2; i++)
+    {
+        for (j = 0; j < 4; j++)
+        {
+            printf("&arr[i][j] :%p\n", &arr[i][j]);
         }
     }
     return 0;
+}*/
+//int main()
+//{
+//    int arr1[] = {4, 5, 6};
+//    int arr2[] = {1, 2, 3};
+//    printf("%d", arr1[1]);
+//    
+//    return 0;
+//}
+//int main()
+//{
+//    //welcome to bit......                字符从两边开始打印，直到中间打印完成
+//    //char ccc[4][5] = {};
+//    char ccc[4][5] = { 'w', 'e', 'l', 'c', 'o', 'm', 'e', ' ', 't', 'o', ' ', 'b', 'i', 't', '.', '.', '.', '.', '.', '.'};
+//    int i = 0;
+//    int j = 0;                          // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX error
+//    int a = 0;                             // 错误典范
+//    int b = 0;
+//    int strlen = sizeof(ccc);
+//    for (i = 0; i < 4; i++)
+//    {
+//        for (j = 0; j < 5; j++)
+//        {
+//            for (a = 4; a >= 0; a--)
+//            {
+//                for (b = 3; b >= 0; b--)
+//                {
+//                    int count = 0;
+//                    
+//                    printf("%c", ccc[i][j]);
+//                    count = strlen - 2;
+//                    for (count = 18; count >= 0; count--)
+//                    {
+//                        printf(" ");
+//                    }
+//                    printf("%c", ccc[a][b]);
+//                }
+//            }
+//        }
+//    }
+//    return 0;
+//}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>2023-11-12
+//int main()
+//{
+//    int arr1[2][3] = { 0 };            // revise 
+//    int i = 0;
+//    int j = 0;
+//    for (i = 0; i < 2; i++)
+//    {
+//        for (j = 0; j < 3; j++)
+//        {
+//            scanf("%d", &arr1[i][j]);
+//        }
+//    }
+//    for (i = 0; i < 2; i++)
+//    {
+//        for (j = 0; j < 3; j++)
+//        {
+//            printf("%d ", arr1[i][j]);
+//        }
+//    }
+//    printf("\n");
+//    for (i = 0; i < 2; i++)
+//    {
+//        for (j = 0; j < 3; j++)
+//        {
+//            printf("&arr1[%d][%d]: %p\n", i, j, &arr1[i][j]);
+//        }
+//    }
+//}
+//》》》》》》》》》》》》》》》从两边打印 welcome to bit!!!!!!
+//welcome to bit!!!!!!
+//w##################!
+//we################!!
+//wel##############!!!
+//welc############!!!!
+//...
+//welcome######t!!!!!!
+/*int main()
+{
+    char ori[] = "welcome to bit!!!!!!";            // MYSELF  ERROR XXXXXXXXX
+    int count = sizeof(ori);
+    int num = 0;
+    int aaa = 0;
+    int ccc = count - num - num;// ...#######...
+    while ((count % 2) == 0)   // 成双
+    {
+        for (num = 1; num < (count / 2); num++)
+        {
+            for (num = 0; num < (count/2); num++)
+            {
+                printf("%s", ori[num]); //w
+            }
+            for (aaa = 1; aaa <= ccc; aaa++)
+            {
+                printf('#'); // ...####...
+            }
+            for (num = 0; num < (count / 2); num++)
+            {
+                printf("%s", ori[(count-num)]); //!
+            } 
+        }
+    }
+    return 0;
+}*/
+
+//welcome to bit...
+//#################                用 #行 的数据代替字符串行
+
+//int main()
+//{
+//    char inin[] = "welcome to bit...";         // myself   XXXXXXXXXXXXXXxerror
+//    char aiai[] = "#################";
+//    int num = sizeof(inin);  // 长度分奇数偶数
+//    int count = 0;
+//    int sp = 0;
+//    if ((num % 2) == 0)//偶
+//    {
+//        for (count = 1; count <= num; count++)
+//        {
+//            for (count = 1; count <= num; count++)
+//            {
+//                printf("%s", inin[(count - 1)]);//'w'
+//            }
+//            for (sp = (num-2); sp > 0; sp--)
+//            {
+//                printf("%s", aiai[sp]);//'#'
+//            }
+//            printf("%s\n", inin[(num-count)]);//.
+//
+//        }
+//    }
+//    if((num % 2) == 1)//奇
+//
+//    return 0;
+//}
+#include<string.h>
+#include<windows.h>
+int main()
+{
+    char arr1[] = "welcome to bit!!!!!!";
+    char arr2[] = "####################";       // 阶梯一步一步显示的
+    int left = 0;//左边从下标为0 的换
+    int right = strlen(arr1) - 1;//右边从下标为 str-1 的换
+    //int right = sizeof(arr1) - 2
+    while (left  <= right)
+    {
+        arr2[left] = arr1[left];
+        arr2[right] = arr1[right];
+        printf("%s\n", arr2);
+        Sleep(80);       // 100ms   使其快速闪现
+        system("cls");  // 清屏控制台
+        left++;
+        right--;
+    }
+    printf("%s\n", arr2);// 以防"cls"被清零后
+    return 0;
 }
+ 
+    ///*int i = sizeof(arr1);                    //>>>>
+    //printf("%d ", i);                               >>>> strlen & sizeof
+    //int ii = strlen(arr1);                     //>>>>
+    //printf("%d", ii);*/                    sizeof("abs") : 4    a b c \0
+    //                                       strlen("abs") : 3 
+    ///*int i = 0;
+    //int count = sizeof(arr1);
+    //for()*/
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//int main()
+//{
+//    char in[30] = { 0 };
+//    while((scanf("%s", &in)) != EOF)
+//    {
+//        printf("%s\n", in);
+//    }
+//    return 0;
+//}
+//int main()
+//{
+//    /*printf("%-5d\n", 123);
+//    printf("%5.3f\n", 3.14);
+//    printf("%*.*f\n", 7, 5, 3.145);
+//    int a = 0;
+//    int b = 0;
+//    float c = 0;
+//    float d = 0;
+//    scanf("%d%d%f%f", &a, &b, &c, &d);
+//    printf("%d %d %f %f\n", a, b, c, d);*/
+//    int a = 0;
+//    while(((scanf(" %c", &a))) != EOF)
+//    {
+//        printf("%c\n", a);
+//    }
+//
+//    return 0;
+//}
