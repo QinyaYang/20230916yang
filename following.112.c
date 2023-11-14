@@ -1181,38 +1181,195 @@ int main()
 //}
 #include<string.h>
 #include<windows.h>
-int main()
-{
-    char arr1[] = "welcome to bit!!!!!!";
-    char arr2[] = "####################";       // 阶梯一步一步显示的
-    int left = 0;//左边从下标为0 的换
-    int right = strlen(arr1) - 1;//右边从下标为 str-1 的换
-    //int right = sizeof(arr1) - 2
-    while (left  <= right)
-    {
-        arr2[left] = arr1[left];
-        arr2[right] = arr1[right];
-        printf("%s\n", arr2);
-        Sleep(80);       // 100ms   使其快速闪现
-        system("cls");  // 清屏控制台
-        left++;
-        right--;
-    }
-    printf("%s\n", arr2);// 以防"cls"被清零后
-    return 0;
-}
+//int main()
+//{
+//    char arr1[] = "welcome to bit!!!!!!";
+//    char arr2[] = "####################";       // 阶梯一步一步显示的
+//    int left = 0;//左边从下标为0 的换
+//    int right = strlen(arr1) - 1;//右边从下标为 str-1 的换
+//    //int right = sizeof(arr1) - 2
+//    while (left  <= right)  // 统一了奇偶
+//    {
+//        arr2[left] = arr1[left];
+//        arr2[right] = arr1[right];
+//        printf("%s\n", arr2);
+//        Sleep(80);       // 100ms   使其快速闪现
+//        system("cls");  // 清屏控制台
+//        left++;
+//        right--;
+//    }
+//    printf("%s\n", arr2);// 以防"cls"被清零后
+//    return 0;
+//}
  
     ///*int i = sizeof(arr1);                    //>>>>
     //printf("%d ", i);                               >>>> strlen & sizeof
     //int ii = strlen(arr1);                     //>>>>
-    //printf("%d", ii);*/                    sizeof("abs") : 4    a b c \0
-    //                                       strlen("abs") : 3 
+    //printf("%d", ii);*/                    //sizeof("abs") : 4    a b c \0
+                                             //strlen("abs") : 3 
     ///*int i = 0;
     //int count = sizeof(arr1);
     //for()*/
     
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>2023-11-13
+/*int main()
+{
+    char arr1[] = "I LOVE YOU MONICA!!!";
+    char arr2[] = "********************";
+    int left = 0;
+    int right = 0;
+    right = (sizeof(arr1)) - 2;
+    while (left <= right)
+    {
+        arr2[left] = arr1[left];
+        arr2[right] = arr1[right];
+        left++;
+        right--;
+        printf("%s\n", arr2);
+        Sleep(100);
+        system("cls");
+    }
+    printf("%s\n", arr2);
+    return 0;
+}*/
 
+//int main()       // 猜数字
+//{
+//    int rid = 0;
+//    int num = 0;
+//    printf("set up a result:");
+//    scanf("%d", &rid);
+//    printf("******************************\n");
+//    printf("******************************\n");
+//    printf("******************************\n");
+//    printf("******************************\n");
+//    printf("******************************\n");
+//    printf("******************************\n");
+//    printf("******************************\n");
+//    printf("请猜数字:> ");
+//    while (((scanf("%d", &num)) != EOF))
+//    {
+//        if (num == rid)
+//        {
+//            printf("bingo\n");
+//            break;
+//        }
+//        if (num > rid )
+//        {
+//            printf("is bigger than result\n");
+//            continue;
+//        }
+//        if (num < rid)
+//        {
+//            printf("is smaller than result\n");
+//            continue;
+//        }
+//    }
+//    return 0;
+//}
 
+//int main()
+//{
+//    int inin = 0;
+//    int count = 0;
+//    printf("please input:>");          //  myself errorXXXXXXXXXXx
+//    scanf("%d", &inin);   //60
+//    int half = (inin / 2);    //50
+//    if ((inin >= 0) && (inin < 100))
+//    {
+//        int left = 0;
+//        int right = 100;
+//        if (inin > half)    //60>50 
+//        {
+//            left = half;    //left=50
+//            int bub = half;
+//            half = (left + right) / 2;    //half=75 
+//            while (half > inin)          //inin=60
+//            {
+// 
+//            }         
+//        }
+//    }
+//    return 0;
+//}
+// 2023-11-14
+//int main()               // 《《《《《二分法查找（折半查找）》》》》》》
+//{
+//    int inin = 0;
+//    printf("please input :>");
+//    if (((scanf("%d", &inin)) == NULL))      //myself   error XXXXXXXXX
+//    {
+//        printf("******************************\n");
+//        printf("******************************\n");
+//        printf("******************************\n");
+//        printf("******************************\n");
+//        printf("******************************\n");
+//        int arr[100] = { 0 };
+//        int a = 0;
+//        for (a = 0; a <= 100; a++) //arr 0~100
+//        {
+//            arr[a] = a;
+//        }
+//        if ((inin >= 0) && (inin <= 100))
+//        {
+//            int half = 50;
+//            int left = 0;
+//            int right = 100;
+//            int num = 0;
+//            while (inin > half)
+//            {
+//                half = (half + right) / 2;
+//                int ccc[] = { 0 };
+//                int i = 0;
+//                for (i = 0; i < 7; i++)
+//                {
+//                    ccc[i] = half;             // 把所得中间值存入数组
+//                    num = ccc[(i - 1)];
+//                }
+//            }
+//            half = (half + num) / 2;
+//            while (inin < half)
+//            {
+//                half--;
+//                if (half == inin)
+//                {
+//                    printf("%d\n", half);
+//                }
+//            }
+//            while (inin > half)
+//            {
+//                half++;
+//                if (half == inin)
+//                {
+//                    printf("%d\n", half);
+//                }
+//            }
+//        }
+//    }
+//    return 0;
+//}
+//int main()      //>>>>>>>>>>>>>>>>>>>>>>> 一一查找 慢得很效率低
+//{
+//    int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };   //升序数列
+//    int sz = sizeof(arr) / sizeof(arr[0]);           //数列个数
+//    int k = 0;            // k - 7
+//    int i = 0;
+//    scanf("%d", &k);          //在arr中查找k
+//    for (i = 0; i < sz; i++)
+//    {
+//        if (arr[i] == k)
+//        {
+//            printf("find it\n");
+//            printf("下标为：%d", i);
+//            break;
+//        }
+//    }
+//    if (i == sz)
+//    {
+//        printf("404 - cannot find\n");
+//    }
+//    return 0;
+//}
 
 
 
