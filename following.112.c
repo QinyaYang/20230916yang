@@ -1348,7 +1348,7 @@ int main()
 //    }
 //    return 0;
 //}
-//int main()      //>>>>>>>>>>>>>>>>>>>>>>> 一一查找 慢得很效率低
+//int main()      //>>>>>>>>>>>>>>>>>>>>>>>《《《《 1~10 的逐一查找 慢得很效率低》》》》
 //{
 //    int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };   //升序数列
 //    int sz = sizeof(arr) / sizeof(arr[0]);           //数列个数
@@ -1371,9 +1371,129 @@ int main()
 //    return 0;
 //}
 
-
-
-
+//>>>>>>>>>>>>>>>>>>>2023-11-15
+/*int main()
+{
+    int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    int k = 0; 
+    int i = 0;
+    printf("请输入需要查找的数字: > ");
+    scanf("%d", &k);
+    int sz = sizeof(arr) / sizeof(arr[0]);
+            while (i <= sz)
+            {
+                if (k == arr[i])
+                {
+                    printf("可以找到，下标为 %d\n", i);
+                        break;
+                }
+                if (sz == i)
+                {
+                    printf("不能被找到\n");
+                    break;
+                }
+                    i++;
+            }
+            return 0;
+}*/
+//int main()
+//{
+//    int i = 0; 
+//    int arr[100] = { 0 };          // myself error XXXXXXXXXX
+//    int num = 0;
+//    printf("请输入需要查找的数字 :> ");
+//    scanf("%d", &num);
+//    int sz = sizeof(arr) / sizeof(arr[0]);
+//    int half = sz / 2;            // half - 5
+//    int left = 0;                 //left - 0
+//    int right = sz - 1;           //right - 9
+//    for (i = 0; i < 100; i++)
+//    {
+//        arr[i] = i;
+//    }
+//    if (num == half)
+//    {
+//        printf("可以找到,下标为 %d", half);
+//    }
+//    while ((half < right) && (half > left))
+//    {
+//        again:
+//        {
+//            while (num > half)
+//            {
+//                half = (half + right) / 2;
+//
+//                //int a = 0;
+//                //for (a = 0; a <sz/2; a++)
+//                //{
+//                //    half[a] = half;
+//                //}
+//            }
+//        }
+//        while (num < half)
+//        {
+//            half = (half + left) / 2;
+//        }
+//        goto again;
+//        if (half == num)
+//        {
+//            printf("可以找到，下标为: %d", half);
+//        }
+//    }
+//    return 0;
+//}
+//int main()                              //《《《《 1~10 的二分法查找》》》》》》》
+//{                       // 逐一查找要10次   折半查找4次
+//    int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+//    int sz = sizeof(arr) / sizeof(arr[0]);
+//    int num = 0;                               //myself error
+//    scanf("%d", &num);
+//    int half = 0;
+//    half = sz / 2;
+//    if (num > half)     // 这里要改为 num > arr[half]  是数组里的数比较，不是数和数的下标比较
+//    {
+//
+//    }
+//    return 0;
+//}
+//>>>>>>>>>>>>>>>>>>>>>.2023-11-16
+//                             《《《《《《《《《1~10 二分法查找》》》》》》》》》
+//int main()
+//{
+//    int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };    //√√√√√√√√√√√√
+//    int k = 0;
+//    printf("请输入需要查找的数：> ");
+//    scanf("%d", &k);
+//    int sz = sizeof(arr) / sizeof(arr[0]);
+//    int left = 0;                              //确定最左值下标 
+//    int right = sz - 1;                        //确定最右值下标
+//    //int find = 0;
+//    while (left <= right)
+//    {
+//        int mid = (left + right) / 2;              //确定中间值下标
+//
+//        if (k == arr[mid])                         //终究要把 mid 缩减得到 k
+//        {
+//            printf("找到了，下标为：%d\n", mid);
+//            //find = 1;
+//            break;
+//        }
+//        if (k > arr[mid])
+//        {
+//            left = mid + 1;
+//        }
+//        if (k < arr[mid])
+//        {
+//            right = mid - 1;
+//        }
+//    } 
+//    //break找到了跳出来；找不到
+//    if (left > right)   //if (0 == find)
+//    {
+//    printf("该数不能被查找到\n");
+//    }
+//    return 0;
+//}
 
 
 
