@@ -1495,15 +1495,6 @@ int main()
 //    return 0;
 //}
 
-
-
-
-
-
-
-
-
-
 //int main()
 //{
 //    char in[30] = { 0 };
@@ -1532,3 +1523,13 @@ int main()
 //
 //    return 0;
 //}
+int main()
+{
+    int arr1[][3] = { 1, 2, 3, 4, 5 };
+    printf("arr1: %zd\n", sizeof(arr1));
+    int arr2[][3] = { {1,2}, {3,4}, 5 };
+    printf("arr2: %zd\n", sizeof(arr2));
+    int arr3[] = { 1, 2, (3,4), 5 };
+    printf("arr3: %zd\n", sizeof(arr3));
+    return 0;
+}
