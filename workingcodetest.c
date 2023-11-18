@@ -138,3 +138,199 @@
 	printf("%d %d %d", a, b, c);
 	return 0;
 }*/
+
+//>>>>>>>>>>>>>>>>>>>>>>>>2023-11-17 test
+//int main()
+//{
+//	int arr[][3] = { {0,,2},{},{3,4,5} };
+//	return 0;
+//}
+
+//int main()
+//{
+//	char arr[] = "hello bit";
+//	printf("%zd %zd", strlen(arr), sizeof(arr));
+//	return 0;
+//}
+
+//int main()                                // 输入10个数 并求平均值
+//{
+//	int arr[10] = { 0 };
+//	int i = 0;
+//	int add = 0;
+//	double average = 0;
+//	printf("<求平均值>请输入10个数：>");
+//	for (i = 0; i < 10; i++)
+//	{
+//		scanf("%d", &arr[i]);
+//		
+//	}
+//	for (i = 0; i < 10; i++)
+//	{
+//		add = add + arr[i];
+//	}
+//	average = add / 10.0;
+//	printf("%lf\n", average);
+//	return 0;
+//}
+
+//int main()
+//{
+//	char arr1[] = "abcdefg";
+//  	char arr2[] = { 'a', 'b', 'c', 'd', 'e', 'f', 'g' };
+//	printf("%d %d\n", strlen(arr1), strlen(arr2));   // 7 58  ??????????
+//	printf("%zd %zd\n", sizeof(arr1), sizeof(arr2)); // 8 7
+//	return 0;
+//}
+
+//int main()
+//{
+//	int i = 0;
+//	scanf("%d", &i);
+//	int arr[i][i] = { 0 };
+//	return 0;
+//}
+
+#include <stdio.h>
+ 
+//int main()                            // 在 vs上不能用变长数组！！！！！
+//{
+//	int i = 0;
+//	int j = i;
+//	int num = 0;
+//	while ((scanf("%d", &num)) != EOF)
+//	{
+//		i = j = num;                               // myself  error XXXXXXX
+//		int arr[i][j];                 // 创建二维数组这里
+//		for (i = 0; i < num; i++)      // 二维数组只是在空间中的存储是 i行j列
+//		{                              // 不代表输出的格式就是那样
+//			for (j = 0; j < num; j++)
+//			{
+//				if ((i + j) == (i - 1))
+//				{
+//					printf("*", arr[i][j]);
+//				}
+//				if (i == j)
+//				{
+//					printf("*", arr[i][j]);
+//				}
+//				else
+//				{
+//					printf(" ");
+//				}
+//			}
+//		}
+//	}
+//	return 0;
+//}
+
+//int main()
+//{
+//	int num = 0;
+//	while ((scanf("%d", &num)) != EOF)
+//	{
+//		int i = 0;
+//		int j = 0;
+//		for (i = 0; i < num; i++)
+//		{
+//			for (j = 0; j < num; j++)
+//			{
+//				if ((i == j) || ((i + j) == (num - 1)))
+//				{
+//					printf("*");
+//				}
+//				else
+//				{
+//					printf(" ");
+//				}
+//			}
+//			printf("\n");
+//		}
+//	}
+//	return 0;
+//}
+
+
+
+
+//#include <stdio.h>                      // 别人的思路  不用二维数组
+//int main()
+//{
+//	int n = 0;
+//	while (scanf("%d", &n) != EOF)
+//	{
+//		for (int i = 0; i < n; i++)  //外循环为行
+//		{
+//			for (int j = 0; j < n; j++) //内循环为列
+//			{
+//				if (i == j || i + j == n - 1)
+//					//最关键的地方，正斜线为[i][i]处是*， 反斜杠为[i][n-1-j]处是*，一行打印1个或2个*
+//					printf("*");
+//				else
+//					printf(" ");
+//			}
+//			printf("\n"); //打印完一行，换行
+//		}
+//	}
+//	return 0;
+//}
+
+//int main()
+//{
+//	int num = 0;
+//	int i = 0;
+//	int j = 0;
+//	while ((scanf("%d", &num)) != EOF)
+//	{
+//		for (i = 0; i < num; i++)
+//		{
+//			for (j = 0; j < (num + num - 1); j++)
+//			{
+//				if ((i == 0) || (i == (num - 1)))
+//				{
+//					if ((j % 2) != 0)
+//					{
+//						printf("*");
+//					}
+//					else
+//					{
+//						printf(" ");
+//					}
+//				}
+//				else
+//				{
+//					if ((j == 1) || (j == (num + num - 2)))
+//					{
+//						printf("*");
+//					}
+//					else
+//					{
+//						printf(" ");
+//					}
+//				}
+//			}
+//			printf("\n");
+//		}
+//	}
+//	return 0;
+//}
+
+int main()
+{
+	int A[4] = { 1, 2, 3, 4 };               //  myself  error XXXXXXXXXXXXXXXXx
+	int B[4] = { 2, 3, 4, 5 };
+	int C[4] = { 0 };
+	C[4] = A[4];
+	A[4] = B[4];
+	B[4] = C[4];
+	int i = 0;
+	int j = 0;
+	for (i = 0; i < 4; i++)
+	{
+		for (j = 0; j < 4; j++)
+		{
+			printf("%d ", A[4]);
+		}
+	}
+	return 0;
+}
