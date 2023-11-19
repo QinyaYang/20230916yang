@@ -275,7 +275,7 @@
 //	return 0;
 //}
 
-//int main()
+//int main()              //QQQQQQQQQQQQQQQQQQQQq 用二维数组怎么做
 //{
 //	int num = 0;
 //	int i = 0;
@@ -315,21 +315,92 @@
 //	return 0;
 //}
 
+//int main()
+//{
+//	int a[4] = { 1, 2, 3, 4 };            // 置换两个数组的所有元素
+//	int b[4] = { 5, 6, 7, 8 };
+//	int c[4] = { 0 };
+//	int i = 0;	
+//	for (i = 0; i < 4; i++)
+//	{
+//		c[i] = a[i];
+//		a[i] = b[i];
+//		b[i] = c[i];
+//	}
+//	for (i = 0; i < 4; i++)
+//	{
+//		printf("%d ", a[i]);
+//	}
+//	printf("\n");
+//	for (i = 0; i < 4; i++)
+//	{
+//		printf("%d ", b[i]);
+//	}
+//	return 0;
+//}
+
+#include <stdio.h>
+
+//int main()
+//{
+//	int n = 0;                  //  矩阵倒置  没用二维数组QQQQQQQQQQQQqq
+//	int m = 0;
+//	while (((scanf("%d", &n)) >= 1) && (scanf("%d", &n)) <= 10)
+//	{
+//		while (((scanf("%d", &m)) >= 1) && (scanf("%d", &m)) <= 10)
+//		{
+//			int a = n;
+//			int b = m;
+//			int arr[] = { 0 };
+//			int num = 0;
+//			for (n = 0; n < a; n++)
+//			{
+//				for (m = 0; m < b; m++)
+//				{
+//					scanf("%d", &arr[num]);
+//					num++;
+//				}
+//			}
+//			int aaa[] = { 0 };
+//			for (m = 0; m < b; m++)
+//			{
+//				for (n = 0; n < a; n++)
+//				{
+//					int count = 0;
+//					aaa[count] = arr[]        // ??????
+//				}
+//			}
+//		}
+//	}
+//	return 0;
+//}
+
 int main()
 {
-	int A[4] = { 1, 2, 3, 4 };               //  myself  error XXXXXXXXXXXXXXXXx
-	int B[4] = { 2, 3, 4, 5 };
-	int C[4] = { 0 };
-	C[4] = A[4];
-	A[4] = B[4];
-	B[4] = C[4];
-	int i = 0;
-	int j = 0;
-	for (i = 0; i < 4; i++)
+	int i = 0;                               // 用二维数组做
+	int j = 0;                       // 有问题，明天看
+	int arr[i][j];
+	while (((scanf("%d", &i)) >= 1) && (scanf("%d", &i)) <= 10)
 	{
-		for (j = 0; j < 4; j++)
+		while (((scanf("%d", &j)) >= 1) && (scanf("%d", &j)) <= 10)
 		{
-			printf("%d ", A[4]);
+			int a = i;
+			int b = j;
+			for (i = 0; i < a; i++)
+			{
+				for (j = 0; j < b; j++)
+				{
+					scanf("%d", &arr[i][j]);
+				}
+			}
+			for (j = 0; j < b; j++)
+			{
+				for (i = 0; i < a; i++)
+				{
+					printf("%d ", arr[i][j]);
+				}
+				printf("\n");
+			}
 		}
 	}
 	return 0;
