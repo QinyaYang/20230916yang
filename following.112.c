@@ -1523,13 +1523,73 @@ int main()
 //
 //    return 0;
 //}
+//int main()
+//{
+//    int arr1[][3] = { 1, 2, 3, 4, 5 };
+//    printf("arr1: %zd\n", sizeof(arr1));
+//    int arr2[][3] = { {1,2}, {3,4}, 5 };
+//    printf("arr2: %zd\n", sizeof(arr2));
+//    int arr3[] = { 1, 2, (3,4), 5 };
+//    printf("arr3: %zd\n", sizeof(arr3));
+//    return 0;
+//}
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>2023-11-21
+//     2023.10.27 《《《《《《《第六讲：函数》》》》》》》》       
+
+//int main()
+//{
+//    int a = 0;
+//    int b = 0;
+//    scanf("%d%d", &a, &b);
+//    int sum = 0;
+//    sum = a + b;
+//    printf("sum = %d\n", sum);    // 旧版运算
+//    return 0;
+//}
+/*int MUL(int x, int y)             // 函数运算
+{
+    int z = 0;  //
+    z = x * y;  //>>>简化：return x*y
+    return z;   //
+}
 int main()
 {
-    int arr1[][3] = { 1, 2, 3, 4, 5 };
-    printf("arr1: %zd\n", sizeof(arr1));
-    int arr2[][3] = { {1,2}, {3,4}, 5 };
-    printf("arr2: %zd\n", sizeof(arr2));
-    int arr3[] = { 1, 2, (3,4), 5 };
-    printf("arr3: %zd\n", sizeof(arr3));
+    int a = 0;
+    int b = 0;
+    scanf("%d%d", &a, &b);
+    int mul = MUL(a, b);
+    printf("mul = %d\n", mul);
     return 0;
-}
+}*/
+
+//int Add(int x, int y)     // x, y ———— 形参
+//{
+//    int z = 0;
+//    z = x + y;
+//    return z;                 // 自定义函数 
+//}
+//int main()
+//{
+//    int a = 0;
+//    int b = 0;
+//    int sum = 0;
+//    scanf("%d%d", &a, &b);
+//    sum = Add(a, b);         // a, b ————实参
+//    printf("sum = %d\n", sum);
+//    return 0;
+//}
+
+#include<math.h>
+#include<stdio.h>
+
+//int main()
+//{
+//    double a = 0;
+//    double res = 0;
+//    scanf("%lf", &a);
+//    res = sqrt(a);              // function - sqrt
+//    printf("sqrt(%lf): %lf", a, res);
+//    return 0;
+//}
+ 
